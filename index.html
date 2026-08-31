@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rory's Homeschool Hub</title>
+  <meta name="description" content="Rory's homeschool dashboard, assessments, assignments, learning log, portfolio, and reports.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-grid">
+    <div>
+      <div class="kicker">2026–2027 · Grade 3</div>
+      <h1>Rory's Homeschool Hub</h1>
+      <p class="tagline">Learn something. Make something. Show what you know.</p>
+    </div>
+    <div class="overall">
+      <span>Overall completion</span>
+      <strong id="overallPercent">0%</strong>
+      <div class="bar"><div id="overallBar"></div></div>
+      <small id="overallCount">0 of 0 activities completed</small>
+    </div>
+  </div>
+</header>
+
+<nav class="nav wrap" aria-label="Main navigation">
+  <button class="navbtn active" data-page="dashboard">Dashboard</button>
+  <button class="navbtn" data-page="subjects">Subjects</button>
+  <button class="navbtn" data-page="assignments">Assignments</button>
+  <button class="navbtn" data-page="assessments">Assessments</button>
+  <button class="navbtn" data-page="learninglog">Daily Learning Log</button>
+  <button class="navbtn" data-page="portfolio">Portfolio</button>
+  <button class="navbtn" data-page="reports">Reports</button>
+</nav>
+
+<main class="wrap">
+  <section id="dashboard" class="page active">
+    <div class="hero">
+      <div>
+        <div class="kicker dark">Good morning, Rory</div>
+        <h2>Today's School Day</h2>
+        <p>During Assessment Week, the goal is simple: show what you already know. You are not expected to know everything.</p>
+      </div>
+      <div class="hero-icon">🧭</div>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="heading"><div><h2>Up Next</h2><p>Your next unfinished school activities.</p></div></div>
+        <div id="upNext" class="cards"></div>
+      </div>
+      <aside class="panel">
+        <h3>Assessment Week Rules</h3>
+        <ul class="clean">
+          <li>Do your own work.</li>
+          <li>You may skip a question and return to it.</li>
+          <li>You may change an answer before submitting.</li>
+          <li>The site will not tell you whether an answer is right or wrong.</li>
+          <li>Once you submit, that attempt is finished.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="subjects" class="page">
+    <div class="heading">
+      <div><div class="kicker dark">Learning map</div><h2>Subjects</h2><p>What we will study and track throughout Grade 3.</p></div>
+    </div>
+    <div id="subjectCards" class="subject-grid"></div>
+  </section>
+
+  <section id="assignments" class="page">
+    <div class="heading">
+      <div><div class="kicker dark">Schoolwork</div><h2>Assignments</h2><p>Lessons, projects, reading, practice, and hands-on learning.</p></div>
+      <button id="addAssignmentBtn" class="parent-action">+ Add Assignment</button>
+    </div>
+    <div id="assignmentCards" class="cards three"></div>
+    <div id="assignmentEditor" class="panel hidden"></div>
+  </section>
+
+  <section id="assessments" class="page">
+    <div class="heading">
+      <div><div class="kicker dark">Starting point</div><h2>Baseline Assessments</h2><p>These measure the end of Grade 2 and sample early Grade 3 readiness. They are diagnostic, not graded schoolwork.</p></div>
+    </div>
+    <div id="assessmentCards" class="cards three"></div>
+    <div id="assessmentRunner" class="assessment-runner hidden"></div>
+  </section>
+
+  <section id="learninglog" class="page">
+    <div class="heading">
+      <div><div class="kicker dark">Daily record</div><h2>Daily Learning Log</h2><p>Record organized learning experiences, reading, projects, field learning, physical activity, and other schoolwork.</p></div>
+    </div>
+    <div class="two-col">
+      <form id="logForm" class="panel">
+        <h3>Add Learning Entry</h3>
+        <label>Date<input id="logDate" type="date" required></label>
+        <label>Subject<select id="logSubject"></select></label>
+        <label>Minutes<input id="logMinutes" type="number" min="1" max="600" value="30" required></label>
+        <label>What did Rory do?<textarea id="logText" rows="4" required placeholder="Example: Read two chapters aloud, then retold the main events in order."></textarea></label>
+        <label>Parent note (optional)<textarea id="logNote" rows="3" placeholder="Observation, independence level, difficulty, or next step."></textarea></label>
+        <button class="primary" type="submit">Save Entry</button>
+      </form>
+      <div class="panel">
+        <h3>Hours Recorded</h3>
+        <div class="hours-big"><strong id="totalHours">0.0</strong><span>hours</span></div>
+        <p class="muted">This is a running documentation tool, not a substitute for your own attendance or legal-compliance judgment.</p>
+        <div id="logSubjectTotals" class="mini-stats"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading"><h3>Learning Entries</h3><button id="exportLogCsv">Export CSV</button></div>
+      <div id="logEntries" class="record-list"></div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="page">
+    <div class="heading">
+      <div><div class="kicker dark">Evidence of learning</div><h2>Portfolio</h2><p>Keep representative work samples and notes that show Rory's growth over time.</p></div>
+    </div>
+    <div class="two-col">
+      <form id="portfolioForm" class="panel">
+        <h3>Add Portfolio Item</h3>
+        <label>Date<input id="portfolioDate" type="date" required></label>
+        <label>Subject<select id="portfolioSubject"></select></label>
+        <label>Title<input id="portfolioTitle" required placeholder="Example: My Animal Habitat Diagram"></label>
+        <label>Description<textarea id="portfolioDescription" rows="4" required placeholder="What is this work sample and what does it demonstrate?"></textarea></label>
+        <label>Work sample link or filename (optional)<input id="portfolioLink" placeholder="Private Drive link or filename"></label>
+        <button class="primary" type="submit">Add to Portfolio</button>
+      </form>
+      <div class="panel">
+        <h3>Portfolio Guidance</h3>
+        <p>Because this GitHub site can be public, do not upload private work samples directly into the repository. Keep photos, scans, and files in private family storage and record a filename or private link here.</p>
+        <p class="muted">The exported homeschool record preserves the portfolio catalog even if the actual files live elsewhere.</p>
+      </div>
+    </div>
+    <div id="portfolioItems" class="portfolio-grid"></div>
+  </section>
+
+  <section id="reports" class="page">
+    <div class="heading">
+      <div><div class="kicker dark">Parent records</div><h2>Reports</h2><p>Assessment results, skill classifications, progress summaries, observations, and exports.</p></div>
+    </div>
+
+    <div class="notice">
+      <strong>Parent area:</strong> This static GitHub site does not provide true password security. Keep sensitive information out of the repository and export the record to private storage.
+    </div>
+
+    <div class="four-stats">
+      <div class="stat"><span>Assessments submitted</span><strong id="reportAssessments">0</strong></div>
+      <div class="stat"><span>Assignments completed</span><strong id="reportAssignments">0</strong></div>
+      <div class="stat"><span>Learning hours</span><strong id="reportHours">0.0</strong></div>
+      <div class="stat"><span>Portfolio items</span><strong id="reportPortfolio">0</strong></div>
+    </div>
+
+    <div class="panel">
+      <h3>Baseline Skill Map</h3>
+      <p class="muted">Objective assessment items are classified automatically for the parent report. Student-facing assessment screens never show these results.</p>
+      <div id="skillMap" class="skill-map"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Assessment Attempts</h3>
+      <div id="attemptReports" class="record-list"></div>
+    </div>
+
+    <div class="two-col">
+      <form id="observationForm" class="panel">
+        <h3>Add Parent Observation</h3>
+        <label>Date<input id="obsDate" type="date" required></label>
+        <label>Subject<select id="obsSubject"></select></label>
+        <label>Observation<textarea id="obsText" rows="5" required placeholder="Example: Rory solved two-step addition problems independently but needed a reminder to line up place values."></textarea></label>
+        <button class="primary" type="submit">Save Observation</button>
+      </form>
+      <div class="panel">
+        <h3>Export / Backup</h3>
+        <p>Completion data is stored in this browser on this device. Export regularly so Rory's homeschool record is durable and portable.</p>
+        <div class="button-stack">
+          <button id="exportRecord" class="primary">Export Full Record (.json)</button>
+          <button id="exportSummary">Export Progress Summary (.csv)</button>
+          <label class="filebtn">Import Previous Record<input id="importRecord" type="file" accept=".json,application/json"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Parent Observations</h3>
+      <div id="observationList" class="record-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <p>Rory's Homeschool Hub · Grade 3 · 2026–2027</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
