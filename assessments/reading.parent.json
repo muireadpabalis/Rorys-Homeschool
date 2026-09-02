@@ -1,0 +1,953 @@
+{
+  "student": "Rory",
+  "subject": "reading",
+  "title": "ELA / Reading Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "reading-1",
+      "type": "choice",
+      "band": "A",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Short vowel recognition",
+      "ma": "RF.1.3",
+      "ca": "RF.3.3",
+      "prompt": "Which word has the same middle vowel sound as cat?",
+      "options": [
+        "Cake",
+        "Cup",
+        "Map",
+        "Coat",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Map",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-2",
+      "type": "choice",
+      "band": "A",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Consonant digraph",
+      "ma": "RF.1.3",
+      "ca": "RF.3.3",
+      "prompt": "Which word begins with the same sound as ship?",
+      "options": [
+        "Chip",
+        "Shop",
+        "Tip",
+        "Slip",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Shop",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-3",
+      "type": "choice",
+      "band": "A",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Silent e pattern",
+      "ma": "RF.1.3",
+      "ca": "RF.3.3",
+      "prompt": "Which word has a long a sound?",
+      "options": [
+        "Cape",
+        "Cap",
+        "Can",
+        "Cat",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Cape",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-4",
+      "type": "choice",
+      "band": "A",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Word parts",
+      "ma": "RF.1.3",
+      "ca": "RF.3.3",
+      "prompt": "Which two smaller words make up sunset?",
+      "options": [
+        "Suns and eat",
+        "Sum and net",
+        "Sit and nest",
+        "Sun and set",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Sun and set",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-5",
+      "type": "choice",
+      "band": "A",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Explicit detail",
+      "ma": "RL.1.1",
+      "ca": "RL.3.1",
+      "prompt": "What word did Ben write?",
+      "options": [
+        "BENCH",
+        "GATE",
+        "BEANS",
+        "WIND",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: BEANS",
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place.",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-6",
+      "type": "choice",
+      "band": "B",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Vowel teams",
+      "ma": "RF.2.3",
+      "ca": "RF.3.3",
+      "prompt": "Which word has the same vowel sound as rain?",
+      "options": [
+        "Ran",
+        "Train",
+        "Tin",
+        "Ten",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Train",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-7",
+      "type": "choice",
+      "band": "B",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Two-syllable decoding",
+      "ma": "RF.2.3",
+      "ca": "RF.3.3",
+      "prompt": "Which word has two syllables?",
+      "options": [
+        "Rabbit",
+        "Cat",
+        "Splash",
+        "Dog",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Rabbit",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-8",
+      "type": "choice",
+      "band": "B",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Prefix meaning",
+      "ma": "L.2.4",
+      "ca": "L.3.4",
+      "prompt": "What does reread mean?",
+      "options": [
+        "Stop reading",
+        "Read badly",
+        "Read silently",
+        "Read again",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Read again",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-9",
+      "type": "choice",
+      "band": "B",
+      "domain": "Phonics",
+      "topic": "Phonics",
+      "skill": "Suffix meaning",
+      "ma": "L.2.4",
+      "ca": "L.3.4",
+      "prompt": "What does helpful mean?",
+      "options": [
+        "Without help",
+        "Helping again",
+        "Full of help; useful",
+        "Someone who was helped yesterday",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Full of help; useful",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-10",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Sequence",
+      "ma": "RL.2.5",
+      "ca": "RL.3.5",
+      "prompt": "What did Ben do after finding the sign?",
+      "options": [
+        "He wrote the letters for the first time.",
+        "He tied it to a stick.",
+        "He looked by the gate first.",
+        "He planted a tree.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: He tied it to a stick.",
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-11",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Cause and effect",
+      "ma": "RL.2.3",
+      "ca": "RL.3.3",
+      "prompt": "Why did the sign go under the bench?",
+      "options": [
+        "A strong wind blew it.",
+        "Ben buried it there.",
+        "Rain washed away the letters.",
+        "A bird carried it.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: A strong wind blew it.",
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-12",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Problem and solution",
+      "ma": "RL.2.3",
+      "ca": "RL.3.3",
+      "prompt": "What solved Ben's problem?",
+      "options": [
+        "Making the letters smaller",
+        "Looking only by the gate",
+        "Waiting for more wind",
+        "Tying the sign to a stick",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Tying the sign to a stick",
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-13",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Evidence",
+      "ma": "RL.2.1",
+      "ca": "RL.3.1",
+      "prompt": "How do we know Ben's plan worked?",
+      "options": [
+        "The sign had big letters.",
+        "There was a gate nearby.",
+        "The sign stayed in place the next windy day.",
+        "Ben used paper.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The sign stayed in place the next windy day.",
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-14",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Character response",
+      "ma": "RL.2.3",
+      "ca": "RL.3.3",
+      "prompt": "What did Lina do before deciding what to do?",
+      "options": [
+        "She put the snail in a box.",
+        "She watched the snail.",
+        "She ran home.",
+        "She picked all the leaves.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: She watched the snail.",
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-15",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Message",
+      "ma": "RL.2.2",
+      "ca": "RL.3.2",
+      "prompt": "What lesson fits the story?",
+      "options": [
+        "Watching carefully can help us make a decision.",
+        "A box is always the best home for any animal.",
+        "The first idea is always the best idea.",
+        "Dry paths are the best places for snails to rest.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Watching carefully can help us make a decision.",
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-16",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Different viewpoints",
+      "ma": "RL.2.6",
+      "ca": "RL.3.6",
+      "prompt": "How did the brother's first idea differ from Lina's?",
+      "options": [
+        "He wanted leaves; she wanted a box.",
+        "They both wanted to take the snail home.",
+        "He wanted to draw; she wanted to read.",
+        "He wanted a box; she chose to leave space near the leaves.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: He wanted a box; she chose to leave space near the leaves.",
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-17",
+      "type": "choice",
+      "band": "B",
+      "domain": "Vocabulary",
+      "topic": "Vocabulary",
+      "skill": "Context meaning",
+      "ma": "L.2.4",
+      "ca": "L.3.4",
+      "prompt": "What does damp mean?",
+      "options": [
+        "Very loud",
+        "Completely dark",
+        "A little wet",
+        "Very hard",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: A little wet",
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-18",
+      "type": "choice",
+      "band": "B",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Main topic",
+      "ma": "RI.2.2",
+      "ca": "RI.3.2",
+      "prompt": "What is this passage mostly about?",
+      "options": [
+        "How to follow a trail to a pond",
+        "How beavers build and live",
+        "How branches grow on trees",
+        "How people build boats",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: How beavers build and live",
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-19",
+      "type": "choice",
+      "band": "B",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Key detail",
+      "ma": "RI.2.1",
+      "ca": "RI.3.1",
+      "prompt": "What do beavers use to build dams?",
+      "options": [
+        "Branches, mud, and stones",
+        "Glass, paint, and paper",
+        "Leaves only",
+        "Sand only",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Branches, mud, and stones",
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-20",
+      "type": "choice",
+      "band": "B",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Cause and effect",
+      "ma": "RI.2.3",
+      "ca": "RI.3.3",
+      "prompt": "What happens when a dam slows the water?",
+      "options": [
+        "The stream immediately becomes dry everywhere.",
+        "The water begins flowing faster through the dam.",
+        "The pond becomes a mountain.",
+        "A pond forms.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: A pond forms.",
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-21",
+      "type": "choice",
+      "band": "B",
+      "domain": "Vocabulary",
+      "topic": "Vocabulary",
+      "skill": "Domain word in context",
+      "ma": "RI.2.4",
+      "ca": "RI.3.4",
+      "prompt": "What is a lodge in this passage?",
+      "options": [
+        "A kind of plant food",
+        "A broad tail",
+        "A beaver's home",
+        "A tool for cutting trees",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: A beaver's home",
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-22",
+      "type": "choice",
+      "band": "B",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Author purpose",
+      "ma": "RI.2.6",
+      "ca": "RI.3.6",
+      "prompt": "Why did the author most likely write this passage?",
+      "options": [
+        "To persuade everyone to buy a beaver",
+        "To explain how beavers live",
+        "To tell a pretend story about a talking beaver",
+        "To give directions to a zoo",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: To explain how beavers live",
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-23",
+      "type": "choice",
+      "band": "B",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Supporting reason",
+      "ma": "RI.2.8",
+      "ca": "RI.3.8",
+      "prompt": "Which detail explains how a lodge can help keep beavers safe?",
+      "options": [
+        "Its entrance is underwater.",
+        "Beavers eat plants.",
+        "Beavers carry branches in their mouths.",
+        "Their tails help them swim.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Its entrance is underwater.",
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-24",
+      "type": "choice",
+      "band": "B",
+      "domain": "Comparing texts",
+      "topic": "Comparing texts",
+      "skill": "Similarity",
+      "ma": "RI.2.9",
+      "ca": "RI.3.9",
+      "prompt": "What do both texts describe?",
+      "options": [
+        "A trip to the beach",
+        "A child's lunch",
+        "A ride on a bicycle",
+        "A child's trip to school",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: A child's trip to school",
+      "passage": "Two Ways to Travel\nText A: Maya walks to school with her dad. They see flowers along the path. Walking takes twenty minutes. Maya likes stopping to notice birds.\nText B: Owen rides a bus to school. The trip takes ten minutes. He talks to friends on the bus. He likes staying dry when it rains.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-25",
+      "type": "choice",
+      "band": "B",
+      "domain": "Comparing texts",
+      "topic": "Comparing texts",
+      "skill": "Difference",
+      "ma": "RI.2.9",
+      "ca": "RI.3.9",
+      "prompt": "Which detail is only in Text B?",
+      "options": [
+        "Seeing flowers beside a path",
+        "Walking with Dad",
+        "Talking with friends on a bus",
+        "Taking twenty minutes",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Talking with friends on a bus",
+      "passage": "Two Ways to Travel\nText A: Maya walks to school with her dad. They see flowers along the path. Walking takes twenty minutes. Maya likes stopping to notice birds.\nText B: Owen rides a bus to school. The trip takes ten minutes. He talks to friends on the bus. He likes staying dry when it rains.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-26",
+      "type": "choice",
+      "band": "B",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Rhyme and meaning",
+      "ma": "RL.2.4",
+      "ca": "RL.3.5",
+      "prompt": "Which word rhymes with ground?",
+      "options": [
+        "Green",
+        "Around",
+        "Leaves",
+        "Light",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Around",
+      "passage": "The Little Seed\nA little seed lay in the ground.\nThe rain came tapping all around.\nA green shoot rose to greet the light.\nTwo small leaves opened, fresh and bright.",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-27",
+      "type": "choice",
+      "band": "B",
+      "domain": "Reading strategies",
+      "topic": "Reading strategies",
+      "skill": "Purpose of rereading",
+      "ma": "RF.2.4",
+      "ca": "RF.3.4",
+      "prompt": "You reach the end of a sentence and it does not make sense. What should you do?",
+      "options": [
+        "Reread it carefully and check the words.",
+        "Skip the sentence without checking it.",
+        "Change the words to match the ending you expected.",
+        "Read faster without thinking about the meaning.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Reread it carefully and check the words.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-28",
+      "type": "choice",
+      "band": "C",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Support inference",
+      "ma": "RL.3.1 readiness",
+      "ca": "RL.3.1",
+      "prompt": "Which detail best suggests the snail wanted a cooler, wetter place?",
+      "options": [
+        "Lina had a brother.",
+        "They were on their way home.",
+        "The brother spoke first.",
+        "It moved toward damp leaves and hid in the shade.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: It moved toward damp leaves and hid in the shade.",
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do.",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-29",
+      "type": "choice",
+      "band": "C",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Explain character action",
+      "ma": "RL.3.3 readiness",
+      "ca": "RL.3.3",
+      "prompt": "What does tying the sign show about Ben?",
+      "options": [
+        "He no longer wants a sign in the garden.",
+        "He expects the wind to blow the sign away again.",
+        "He learns from a problem and changes his plan.",
+        "He wants people to look under the bench for the sign.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: He learns from a problem and changes his plan.",
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place.",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-30",
+      "type": "choice",
+      "band": "C",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Connect steps",
+      "ma": "RI.3.3 readiness",
+      "ca": "RI.3.3",
+      "prompt": "What should you do right after the first fold?",
+      "options": [
+        "Pinch one end before making more folds.",
+        "Turn the paper over.",
+        "Spread the paper completely before continuing.",
+        "Move the finished fan back and forth.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Turn the paper over.",
+      "passage": "Make a Paper Fan\nFirst, lay a sheet of paper on a table. Fold a narrow strip along one edge. Turn the paper over and fold another strip. Keep turning and folding. Last, pinch one end and spread the other end. Move the fan back and forth to feel a breeze.",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-31",
+      "type": "choice",
+      "band": "C",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Use text features",
+      "ma": "RI.3.5 readiness",
+      "ca": "RI.3.5",
+      "prompt": "A book has sections called Food, Homes, and Young. Where would you look to learn what an animal eats?",
+      "options": [
+        "Food",
+        "Homes",
+        "Young",
+        "The page number alone",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Food",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-32",
+      "type": "choice",
+      "band": "C",
+      "domain": "Vocabulary",
+      "topic": "Vocabulary",
+      "skill": "Prefix meaning",
+      "ma": "L.3.4 readiness",
+      "ca": "L.3.4",
+      "prompt": "If a knot is untied, what has happened?",
+      "options": [
+        "It has been tied more tightly.",
+        "It has changed color.",
+        "It has been tied twice.",
+        "The tying has been undone.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The tying has been undone.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-33",
+      "type": "choice",
+      "band": "C",
+      "domain": "Comparing texts",
+      "topic": "Comparing texts",
+      "skill": "Evidence-based comparison",
+      "ma": "RI.3.9 readiness",
+      "ca": "RI.3.9",
+      "prompt": "Which statement uses information from both texts?",
+      "options": [
+        "Maya and Owen both ride buses.",
+        "Maya never sees birds.",
+        "Owen's trip takes less time than Maya's.",
+        "Owen always walks in the rain.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Owen's trip takes less time than Maya's.",
+      "passage": "Two Ways to Travel\nText A: Maya walks to school with her dad. They see flowers along the path. Walking takes twenty minutes. Maya likes stopping to notice birds.\nText B: Owen rides a bus to school. The trip takes ten minutes. He talks to friends on the bus. He likes staying dry when it rains.",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-34",
+      "type": "choice",
+      "band": "C",
+      "domain": "Literature",
+      "topic": "Literature",
+      "skill": "Literal and nonliteral meaning",
+      "ma": "RL.3.4 readiness",
+      "ca": "RL.3.4",
+      "prompt": "What does rose to greet the light mean in the poem?",
+      "options": [
+        "The shoot said hello aloud.",
+        "The shoot grew up toward the light.",
+        "The seed became a rose flower at once.",
+        "The rain carried the seed away.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: The shoot grew up toward the light.",
+      "passage": "The Little Seed\nA little seed lay in the ground.\nThe rain came tapping all around.\nA green shoot rose to greet the light.\nTwo small leaves opened, fresh and bright.",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "reading-35",
+      "type": "choice",
+      "band": "C",
+      "domain": "Informational text",
+      "topic": "Informational text",
+      "skill": "Sequence reasoning",
+      "ma": "RI.3.3 readiness",
+      "ca": "RI.3.3",
+      "prompt": "Why must you make folds before spreading the fan?",
+      "options": [
+        "The folds let the paper open into the fan shape.",
+        "The folds show where to cut the paper into strips.",
+        "The folds make the paper absorb water.",
+        "The folds keep both ends closed so the fan cannot spread.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: The folds let the paper open into the fan shape.",
+      "passage": "Make a Paper Fan\nFirst, lay a sheet of paper on a table. Fold a narrow strip along one edge. Turn the paper over and fold another strip. Keep turning and folding. Last, pinch one end and spread the other end. Move the fan back and forth to feel a breeze.",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    }
+  ]
+}

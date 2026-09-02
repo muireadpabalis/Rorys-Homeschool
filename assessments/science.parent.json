@@ -1,0 +1,953 @@
+{
+  "student": "Rory",
+  "subject": "science",
+  "title": "Science Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "science-1",
+      "type": "choice",
+      "band": "A",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Observation",
+      "ma": "MA STE practices: observations",
+      "ca": "CA NGSS practices: observations",
+      "prompt": "Which is something you can observe directly?",
+      "options": [
+        "The leaf grew faster because the soil was richer.",
+        "The leaf is healthier than all the others.",
+        "The leaf is green.",
+        "The leaf will turn brown tomorrow.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The leaf is green.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-2",
+      "type": "choice",
+      "band": "A",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Needs of organisms",
+      "ma": "K-LS1-1",
+      "ca": "3-LS4-3 prerequisite",
+      "prompt": "Which does a bean plant need to grow?",
+      "options": [
+        "Dry soil and no light",
+        "Water and light",
+        "Water but no light for its whole life",
+        "Light but no water for its whole life",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Water and light",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-3",
+      "type": "choice",
+      "band": "A",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Push and pull",
+      "ma": "K-PS2-1",
+      "ca": "3-PS2-1 prerequisite",
+      "prompt": "Which action is a pull?",
+      "options": [
+        "Drawing a wagon toward you with its handle",
+        "Pressing a door away from you",
+        "Kicking a ball away",
+        "Pushing a cart forward",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Drawing a wagon toward you with its handle",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-4",
+      "type": "choice",
+      "band": "A",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Weather observation",
+      "ma": "K-ESS2-1",
+      "ca": "3-ESS2-1 prerequisite",
+      "prompt": "Which tool helps measure how warm the air is?",
+      "options": [
+        "Ruler",
+        "Balance scale",
+        "Magnifying glass",
+        "Thermometer",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Thermometer",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-5",
+      "type": "choice",
+      "band": "A",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Fair test",
+      "ma": "MA STE practices: investigations",
+      "ca": "CA NGSS practices: investigations",
+      "prompt": "To compare two paper towels, what should stay the same?",
+      "options": [
+        "The towel brand being tested",
+        "The answer you hope to get",
+        "The amount of water put on each towel",
+        "Only the name of the tester's friend",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The amount of water put on each towel",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-6",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Observable material properties",
+      "ma": "2-PS1-1",
+      "ca": "CA NGSS PS1.A prerequisite",
+      "prompt": "Which word describes a property of rubber that makes it useful for a band?",
+      "options": [
+        "Brittle",
+        "Flexible",
+        "Rigid",
+        "Absorbent",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Flexible",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-7",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Match material to purpose",
+      "ma": "2-PS1-2",
+      "ca": "CA NGSS PS1.A prerequisite",
+      "prompt": "Which property is most useful for a raincoat?",
+      "options": [
+        "It keeps water from passing through.",
+        "It absorbs water easily.",
+        "It lets water pass through its weave.",
+        "It tears easily when wet.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: It keeps water from passing through.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-8",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Read material test results",
+      "ma": "2-PS1-2",
+      "ca": "CA NGSS practices: analyzing data",
+      "prompt": "Water absorbed: cloth 8 spoonfuls, paper 3, plastic 0. Which absorbed the least water in this test?",
+      "options": [
+        "Cloth",
+        "Paper",
+        "All absorbed the same amount",
+        "Plastic",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Plastic",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-9",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Pieces retain material properties",
+      "ma": "2-PS1-3",
+      "ca": "CA NGSS PS1.A prerequisite",
+      "prompt": "A piece of chalk breaks into two pieces. What are the pieces made of?",
+      "options": [
+        "A new material made by breaking",
+        "A mixture of chalk and air with no solid chalk",
+        "Chalk",
+        "A different substance because the pieces are smaller",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Chalk",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-10",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Reversible change",
+      "ma": "2-PS1-4",
+      "ca": "CA NGSS PS1.B prerequisite",
+      "prompt": "Which change can be reversed by cooling?",
+      "options": [
+        "An egg being cooked",
+        "Ice melting into water",
+        "Paper burning to ash",
+        "Bread being toasted",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Ice melting into water",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-11",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Evidence of irreversible change",
+      "ma": "2-PS1-4",
+      "ca": "CA NGSS PS1.B prerequisite",
+      "prompt": "A cooked egg is cooled. What happens?",
+      "options": [
+        "It stays cooked.",
+        "It becomes raw again.",
+        "It loses all its solid parts.",
+        "It returns to an uncooked egg if the shell is replaced.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: It stays cooked.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-12",
+      "type": "choice",
+      "band": "B",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Friction investigation",
+      "ma": "2-PS3-1(MA)",
+      "ca": "3-PS2-1 prerequisite",
+      "prompt": "The same toy car rolls 80 cm on smooth tile and 25 cm on a rough mat after equal starts. Which claim fits?",
+      "options": [
+        "The rough mat made the car go farther.",
+        "Both surfaces gave the same result.",
+        "The car had no contact with either surface.",
+        "The rough mat slowed the car more.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The rough mat slowed the car more.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-13",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Water changes land",
+      "ma": "2-ESS2-4(MA)",
+      "ca": "CA NGSS ESS2.A prerequisite",
+      "prompt": "After rain, soil from a bare hill is found at the bottom. What moved it?",
+      "options": [
+        "Sunlight carrying the soil",
+        "The hill turning upside down",
+        "Flowing water",
+        "The soil growing legs",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Flowing water",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-14",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Compare erosion solutions",
+      "ma": "2-ESS2-1",
+      "ca": "CA NGSS ESS2.A prerequisite",
+      "prompt": "Equal trays of soil receive equal water. The tray with grass loses less soil. What does this support?",
+      "options": [
+        "Grass increased soil loss.",
+        "Grass can help slow soil loss.",
+        "The water had no effect on either tray.",
+        "The evidence shows bare soil holds better than planted soil.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Grass can help slow soil loss.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-15",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Landforms",
+      "ma": "2-ESS2-2",
+      "ca": "3-ESS2-2 prerequisite",
+      "prompt": "Which describes a valley?",
+      "options": [
+        "Low land between higher areas",
+        "Land surrounded by water on all sides",
+        "A huge body of salty water",
+        "The very top of every mountain",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Low land between higher areas",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-16",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Bodies of water",
+      "ma": "2-ESS2-2",
+      "ca": "3-ESS2-2 prerequisite",
+      "prompt": "Which is a body of water that usually flows across land?",
+      "options": [
+        "Hill",
+        "Plain",
+        "Peninsula",
+        "River",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: River",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-17",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Water in solid form",
+      "ma": "2-ESS2-3",
+      "ca": "3-ESS2-1 prerequisite",
+      "prompt": "Where is water in solid form?",
+      "options": [
+        "In flowing rainwater",
+        "In a liquid puddle",
+        "In a piece of ice",
+        "In liquid water in a cup",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: In a piece of ice",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-18",
+      "type": "choice",
+      "band": "B",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Map model",
+      "ma": "2-ESS2-2",
+      "ca": "CA NGSS practices: models",
+      "prompt": "A map key says blue lines are rivers and brown triangles are mountains. What does a blue line show?",
+      "options": [
+        "A mountain",
+        "A river",
+        "A road according to this key",
+        "A school according to this key",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: A river",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-19",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Dependence on environment",
+      "ma": "2-LS2-3(MA)",
+      "ca": "3-LS4-3 prerequisite",
+      "prompt": "A rabbit lives where it can find plants and shelter. Why are these important?",
+      "options": [
+        "They help meet its needs for food and safety.",
+        "They replace the rabbit’s need for water.",
+        "They let the rabbit obtain all food from sunlight.",
+        "They mean the rabbit does not need air.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: They help meet its needs for food and safety.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-20",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Compare habitats",
+      "ma": "2-LS4-1",
+      "ca": "3-LS4-3 prerequisite",
+      "prompt": "A pond has fish and water plants; a dry field has grasshoppers and grasses. What do these observations show?",
+      "options": [
+        "All places have exactly the same organisms.",
+        "Fish live only in dry grass.",
+        "Only ponds contain living things.",
+        "Different places can support different living things.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Different places can support different living things.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-21",
+      "type": "choice",
+      "band": "B",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Plant dependence",
+      "ma": "2-LS2-3(MA)",
+      "ca": "3-LS4-3 prerequisite",
+      "prompt": "Two similar plants receive equal light. One gets water and one does not. The watered plant grows better. What is supported?",
+      "options": [
+        "Light alone explains the difference because water was not changed.",
+        "The test shows water has no effect.",
+        "Water helped the plant grow in this test.",
+        "The dry plant must have received more water.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Water helped the plant grow in this test.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-22",
+      "type": "choice",
+      "band": "B",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Evidence for claim",
+      "ma": "MA STE practices: evidence",
+      "ca": "CA NGSS practices: evidence",
+      "prompt": "Which best supports the claim that seeds sprouted?",
+      "options": [
+        "The seeds were placed in a blue cup.",
+        "A record shows six seeds grew roots.",
+        "The seeds were counted before planting.",
+        "The bag said the seeds should sprout.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: A record shows six seeds grew roots.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-23",
+      "type": "choice",
+      "band": "B",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Define a problem",
+      "ma": "K-2-ETS1-1",
+      "ca": "3-5-ETS1-1 prerequisite",
+      "prompt": "A lunchbox leaks water into a bag. What problem should a design solve?",
+      "options": [
+        "Keep the water inside the lunchbox.",
+        "Make the lunchbox hold less food.",
+        "Make the bag larger without changing the lunchbox.",
+        "Change the label on the lunchbox.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Keep the water inside the lunchbox.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-24",
+      "type": "choice",
+      "band": "B",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Compare solutions",
+      "ma": "K-2-ETS1-3",
+      "ca": "3-5-ETS1-2 prerequisite",
+      "prompt": "Two lids are tested by tipping equal cups of water. Lid A leaks and lid B does not. Which works better for preventing leaks in this test?",
+      "options": [
+        "Lid A",
+        "Both leak equally",
+        "Neither can be compared",
+        "Lid B",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Lid B",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-25",
+      "type": "choice",
+      "band": "B",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Use a model",
+      "ma": "K-2-ETS1-2",
+      "ca": "3-5-ETS1-2 prerequisite",
+      "prompt": "Why draw a planned bridge before building it?",
+      "options": [
+        "To prove it will hold any load without testing",
+        "To measure the finished bridge’s strength without building it",
+        "To show how its parts might fit together",
+        "To show only its color while leaving out its parts",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: To show how its parts might fit together",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-26",
+      "type": "choice",
+      "band": "B",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Prediction from repeated observations",
+      "ma": "MA STE practices: patterns",
+      "ca": "CA NGSS practices: predictions",
+      "prompt": "A ball rolled down the same ramp three times and always moved toward the bottom. What is a reasonable prediction for the next similar trial?",
+      "options": [
+        "It will probably remain at the top without support.",
+        "It will probably move toward the bottom again.",
+        "It will probably roll uphill without another push.",
+        "It will probably stop at a different point every time regardless of the setup.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: It will probably move toward the bottom again.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-27",
+      "type": "choice",
+      "band": "B",
+      "domain": "Scientific reasoning",
+      "topic": "Scientific reasoning",
+      "skill": "Separate data from preference",
+      "ma": "MA STE practices: data",
+      "ca": "CA NGSS practices: data",
+      "prompt": "Which statement reports test data?",
+      "options": [
+        "The paper bridge held 12 coins.",
+        "The paper bridge looks strongest.",
+        "The paper bridge should hold the most coins.",
+        "The paper bridge is more useful than every other design.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: The paper bridge held 12 coins.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-28",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Life cycle model",
+      "ma": "MA Grade 3 readiness: 3-LS1-1",
+      "ca": "3-LS1-1",
+      "prompt": "Which order fits a butterfly life cycle?",
+      "options": [
+        "Egg, pupa, caterpillar, adult butterfly",
+        "Caterpillar, egg, adult butterfly, pupa",
+        "Egg, adult butterfly, caterpillar, pupa",
+        "Egg, caterpillar, pupa, adult butterfly",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Egg, caterpillar, pupa, adult butterfly",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-29",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Inherited traits",
+      "ma": "MA Grade 3 readiness: 3-LS3-1",
+      "ca": "3-LS3-1",
+      "prompt": "Which is most likely an inherited trait of a puppy?",
+      "options": [
+        "A trick learned from a trainer",
+        "A muddy paw after a walk",
+        "Its natural fur color",
+        "A ribbon tied to its collar",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Its natural fur color",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-30",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Environmental influence",
+      "ma": "MA Grade 3 readiness: 3-LS3-2",
+      "ca": "3-LS3-2",
+      "prompt": "Two similar plants grow different heights when one gets less water. What can affect growth?",
+      "options": [
+        "Only its inherited traits, never its environment",
+        "The environment, including water supply",
+        "Only the size written on its label",
+        "The number of leaves at the start, regardless of water",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: The environment, including water supply",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-31",
+      "type": "choice",
+      "band": "C",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Balanced forces",
+      "ma": "MA Grade 3 readiness: 3-PS2-1",
+      "ca": "3-PS2-1",
+      "prompt": "Two teams pull equally in opposite directions on a rope that stays still. What describes the pulls?",
+      "options": [
+        "Balanced forces",
+        "A force in only one direction",
+        "No forces at all",
+        "Forces that turn into light",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Balanced forces",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-32",
+      "type": "choice",
+      "band": "C",
+      "domain": "Physical science",
+      "topic": "Physical science",
+      "skill": "Magnetic interaction",
+      "ma": "MA Grade 3 readiness: 3-PS2-3",
+      "ca": "3-PS2-3",
+      "prompt": "A magnet pulls a paper clip before touching it. What does this show?",
+      "options": [
+        "All forces require direct contact.",
+        "The clip moves because the magnet touches the table.",
+        "The paper clip must be falling straight down.",
+        "Magnetic forces can act without contact.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Magnetic forces can act without contact.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-33",
+      "type": "choice",
+      "band": "C",
+      "domain": "Earth science",
+      "topic": "Earth science",
+      "skill": "Weather patterns",
+      "ma": "MA Grade 3 readiness: 3-ESS2-1",
+      "ca": "3-ESS2-1",
+      "prompt": "A town records 20 rainy days in March and 4 in July. What is true of these records?",
+      "options": [
+        "July had more rainy days.",
+        "Both months had the same number.",
+        "March had more rainy days.",
+        "It rained every day in July.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: March had more rainy days.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-34",
+      "type": "choice",
+      "band": "C",
+      "domain": "Life science",
+      "topic": "Life science",
+      "skill": "Fossil evidence",
+      "ma": "MA Grade 3 readiness: 3-LS4-1",
+      "ca": "3-LS4-1",
+      "prompt": "A fossil leaf is found in old rock. What can it help scientists learn?",
+      "options": [
+        "The exact date the leaf fell without any other evidence",
+        "What some plants were like long ago",
+        "The weather at that place tomorrow",
+        "The names people use for all plants today",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: What some plants were like long ago",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "science-35",
+      "type": "choice",
+      "band": "C",
+      "domain": "Engineering",
+      "topic": "Engineering",
+      "skill": "Weather hazard solution",
+      "ma": "MA Grade 3 readiness: 3-ESS3-1",
+      "ca": "3-ESS3-1",
+      "prompt": "A town wants to reduce flood damage to homes. Which plan directly addresses that problem?",
+      "options": [
+        "Build barriers designed to keep floodwater away from homes.",
+        "Paint houses to match the water.",
+        "Build more paths without considering where water flows.",
+        "Make street signs easier to read during ordinary weather.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Build barriers designed to keep floodwater away from homes.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/scitech/2016-04.pdf",
+        "https://www.cde.ca.gov/ci/pl/ngssstandards.asp"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    }
+  ]
+}

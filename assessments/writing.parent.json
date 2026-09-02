@@ -1,0 +1,767 @@
+{
+  "student": "Rory",
+  "subject": "writing",
+  "title": "Writing / Language Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "writing-1",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Capitalization",
+      "ma": "L.1.2",
+      "ca": "L.3.2",
+      "prompt": "Which sentence begins correctly?",
+      "options": [
+        "we played outside.",
+        "wE played outside.",
+        "We played outside.",
+        "WE played Outside.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: We played outside.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-2",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "End punctuation",
+      "ma": "L.1.2",
+      "ca": "L.3.2",
+      "prompt": "Which mark ends this question: Where is my hat",
+      "options": [
+        ".",
+        "?",
+        ",",
+        "'",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: ?",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-3",
+      "type": "choice",
+      "band": "A",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "First-person pronoun",
+      "ma": "L.1.2",
+      "ca": "L.3.2",
+      "prompt": "Which sentence is written correctly?",
+      "options": [
+        "Dad and I made lunch.",
+        "Dad and i made lunch.",
+        "dad and i made lunch.",
+        "Dad And i made lunch.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Dad and I made lunch.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-4",
+      "type": "choice",
+      "band": "A",
+      "domain": "Sentence construction",
+      "topic": "Sentence construction",
+      "skill": "Complete sentence",
+      "ma": "L.1.1",
+      "ca": "L.3.1",
+      "prompt": "Which is a complete sentence?",
+      "options": [
+        "Under the tree.",
+        "A very small.",
+        "Because the dog.",
+        "The dog ran home.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The dog ran home.",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-5",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Irregular plural",
+      "ma": "L.2.1b",
+      "ca": "L.3.1b",
+      "prompt": "One child, two ___.",
+      "options": [
+        "childs",
+        "childes",
+        "children",
+        "child",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: children",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-6",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Irregular past tense",
+      "ma": "L.2.1d",
+      "ca": "L.3.1d",
+      "prompt": "Yesterday I ___ to the park.",
+      "options": [
+        "go",
+        "went",
+        "goed",
+        "going",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: went",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-7",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Adjective use",
+      "ma": "L.2.1e",
+      "ca": "L.3.1a",
+      "prompt": "Which word describes the ball in: The red ball rolled?",
+      "options": [
+        "red",
+        "rolled",
+        "the",
+        "ball",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: red",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-8",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Adverb use",
+      "ma": "L.2.1e",
+      "ca": "L.3.1a",
+      "prompt": "Choose the word: The turtle moved ___.",
+      "options": [
+        "slowest shell",
+        "slowness",
+        "slower than",
+        "slowly",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: slowly",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-9",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Proper noun capitalization",
+      "ma": "L.2.2a",
+      "ca": "L.3.2",
+      "prompt": "Which is written correctly?",
+      "options": [
+        "We read on monday.",
+        "we read on Monday.",
+        "We read on Monday.",
+        "We Read on monday.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: We read on Monday.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-10",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Contraction apostrophe",
+      "ma": "L.2.2c",
+      "ca": "L.3.2d",
+      "prompt": "Which word means do not?",
+      "options": [
+        "dont'",
+        "don't",
+        "do'nt",
+        "dont",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: don't",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-11",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Possessive apostrophe",
+      "ma": "L.2.2c",
+      "ca": "L.3.2d",
+      "prompt": "Which means the hat belonging to Sam?",
+      "options": [
+        "Sam's hat",
+        "Sams hat",
+        "Sams' hat",
+        "Sam hat's",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Sam's hat",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-12",
+      "type": "choice",
+      "band": "B",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Comma in greeting",
+      "ma": "L.2.2b",
+      "ca": "L.3.2",
+      "prompt": "Which greeting has the correct punctuation?",
+      "options": [
+        "Dear, Grandma",
+        "Dear Grandma?",
+        "Dear Grandma'",
+        "Dear Grandma,",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Dear Grandma,",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-13",
+      "type": "choice",
+      "band": "B",
+      "domain": "Spelling and usage",
+      "topic": "Spelling and usage",
+      "skill": "Common spelling pattern",
+      "ma": "L.2.2d",
+      "ca": "L.3.2f",
+      "prompt": "Choose the correctly spelled word.",
+      "options": [
+        "nitee",
+        "nigth",
+        "night",
+        "niht",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: night",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-14",
+      "type": "choice",
+      "band": "B",
+      "domain": "Spelling and usage",
+      "topic": "Spelling and usage",
+      "skill": "Homophone meaning",
+      "ma": "L.2.4",
+      "ca": "L.3.4",
+      "prompt": "Choose the word: I have ___ shoes.",
+      "options": [
+        "too",
+        "two",
+        "to",
+        "tow",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: two",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-15",
+      "type": "choice",
+      "band": "B",
+      "domain": "Sentence construction",
+      "topic": "Sentence construction",
+      "skill": "Combine sentences",
+      "ma": "L.2.1f",
+      "ca": "L.3.1i",
+      "prompt": "Which best combines: I like apples. I like pears.",
+      "options": [
+        "I like apples and pears.",
+        "I like and apples pears.",
+        "Apples I pears like.",
+        "I like apples pears because.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: I like apples and pears.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-16",
+      "type": "choice",
+      "band": "B",
+      "domain": "Sentence construction",
+      "topic": "Sentence construction",
+      "skill": "Expand with a detail",
+      "ma": "L.2.1f",
+      "ca": "L.3.1i",
+      "prompt": "Which adds where to: The cat slept?",
+      "options": [
+        "The cat slept soundly.",
+        "The tired cat slept.",
+        "The cat slept yesterday.",
+        "The cat slept on the sofa.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The cat slept on the sofa.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-17",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Opening sentence",
+      "ma": "W.2.2",
+      "ca": "W.3.2",
+      "prompt": "Which begins a paragraph about caring for a pet rabbit?",
+      "options": [
+        "My bike has two wheels.",
+        "The bus came late.",
+        "A pet rabbit needs daily care.",
+        "I like rainy days.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: A pet rabbit needs daily care.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-18",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Related detail",
+      "ma": "W.2.2",
+      "ca": "W.3.2",
+      "prompt": "Which detail belongs in a paragraph about growing beans?",
+      "options": [
+        "My shoes have red laces.",
+        "Bean plants need water and light.",
+        "The clock is on the wall.",
+        "We ride a bus to the library.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Bean plants need water and light.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-19",
+      "type": "choice",
+      "band": "B",
+      "domain": "Opinion writing",
+      "topic": "Opinion writing",
+      "skill": "Give a reason",
+      "ma": "W.2.1",
+      "ca": "W.3.1",
+      "prompt": "Which gives a reason for wanting a longer recess?",
+      "options": [
+        "I want longer recess because it gives us more time to move and play.",
+        "I want longer recess because longer recess.",
+        "Recess is a word on the board.",
+        "I have a blue lunchbox.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: I want longer recess because it gives us more time to move and play.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-20",
+      "type": "choice",
+      "band": "B",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Ending sentence",
+      "ma": "W.2.2",
+      "ca": "W.3.2",
+      "prompt": "Which ends a paragraph about making a sandwich?",
+      "options": [
+        "First, get two slices of bread.",
+        "Next, spread the filling.",
+        "Before starting, wash your hands.",
+        "Now the sandwich is ready to eat.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Now the sandwich is ready to eat.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-21",
+      "type": "choice",
+      "band": "C",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Subject-verb agreement",
+      "ma": "L.3.1f readiness",
+      "ca": "L.3.1f",
+      "prompt": "Choose the correct sentence.",
+      "options": [
+        "The birds sings.",
+        "The birds is sing.",
+        "The birds sing.",
+        "The birds singing was.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: The birds sing.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-22",
+      "type": "choice",
+      "band": "C",
+      "domain": "Conventions",
+      "topic": "Conventions",
+      "skill": "Comparative adjective",
+      "ma": "L.3.1g readiness",
+      "ca": "L.3.1g",
+      "prompt": "Choose the word: This rope is ___ than that rope.",
+      "options": [
+        "longest",
+        "longer",
+        "most long",
+        "long",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: longer",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-23",
+      "type": "choice",
+      "band": "C",
+      "domain": "Revision",
+      "topic": "Revision",
+      "skill": "Choose precise word",
+      "ma": "L.3.3a readiness",
+      "ca": "L.3.3a",
+      "prompt": "Which word best replaces went to show moving very fast: The rabbit went across the field?",
+      "options": [
+        "dashed",
+        "rested",
+        "stayed",
+        "waited",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: dashed",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "writing-24",
+      "type": "choice",
+      "band": "C",
+      "domain": "Organization",
+      "topic": "Organization",
+      "skill": "Link reasons",
+      "ma": "W.3.1c readiness",
+      "ca": "W.3.1c",
+      "prompt": "Choose the linking words: A garden gives us vegetables. ___, it helps us learn about plants.",
+      "options": [
+        "Instead of that being true",
+        "Before yesterday",
+        "But never",
+        "In addition",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: In addition",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "domain": "Narrative writing",
+      "topic": "Narrative writing",
+      "skill": "Independent composition",
+      "ma": "W.2.3",
+      "ca": "W.3.3",
+      "prompt": "Tell a true or imagined story about solving a small problem. Tell what happened first, next, and last. Include what someone did and how they felt. Write several sentences in your own words.",
+      "rubric": {
+        "scale": {
+          "0": "No observable evidence in this sample",
+          "1": "Emerging; limited or inconsistent evidence",
+          "2": "Developing; some effective evidence",
+          "3": "Secure evidence for this task"
+        },
+        "dimensions": [
+          "Purpose and focus",
+          "Organization and sequence",
+          "Details, reasons, or evidence",
+          "Sentence construction and vocabulary",
+          "Conventions"
+        ],
+        "guidance": "Evaluate what is actually written. A non-response is insufficient evidence, not a zero. Record assistance, dictation, typing or handwriting. Do not equate length or typing fluency with writing ability. Review genre-specific features in the prompt. Grade 2 exit: linked sentences with a beginning and ending; Grade 3 organization is a readiness consideration."
+      },
+      "id": "writing-25",
+      "type": "writing",
+      "correct": null,
+      "options": [],
+      "answerRationale": "Parent rubric review required; no binary grade.",
+      "role": "prior-grade mastery",
+      "band": "B",
+      "passage": "",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "domain": "Informational writing",
+      "topic": "Informational writing",
+      "skill": "Independent composition",
+      "ma": "W.2.2",
+      "ca": "W.3.2",
+      "prompt": "Explain how to do something you know well, such as caring for a plant or playing a game. Introduce the topic, give useful details in order, and write an ending. Write several sentences without help.",
+      "rubric": {
+        "scale": {
+          "0": "No observable evidence in this sample",
+          "1": "Emerging; limited or inconsistent evidence",
+          "2": "Developing; some effective evidence",
+          "3": "Secure evidence for this task"
+        },
+        "dimensions": [
+          "Purpose and focus",
+          "Organization and sequence",
+          "Details, reasons, or evidence",
+          "Sentence construction and vocabulary",
+          "Conventions"
+        ],
+        "guidance": "Evaluate what is actually written. A non-response is insufficient evidence, not a zero. Record assistance, dictation, typing or handwriting. Do not equate length or typing fluency with writing ability. Review genre-specific features in the prompt. Grade 2 exit: linked sentences with a beginning and ending; Grade 3 organization is a readiness consideration."
+      },
+      "id": "writing-26",
+      "type": "writing",
+      "correct": null,
+      "options": [],
+      "answerRationale": "Parent rubric review required; no binary grade.",
+      "role": "prior-grade mastery",
+      "band": "B",
+      "passage": "",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "domain": "Opinion / argument writing",
+      "topic": "Opinion / argument writing",
+      "skill": "Independent composition",
+      "ma": "W.2.1",
+      "ca": "W.3.1",
+      "prompt": "Would you rather have a class garden or a class art wall? State your opinion, give reasons, and write an ending. You may choose either. Write several sentences independently.",
+      "rubric": {
+        "scale": {
+          "0": "No observable evidence in this sample",
+          "1": "Emerging; limited or inconsistent evidence",
+          "2": "Developing; some effective evidence",
+          "3": "Secure evidence for this task"
+        },
+        "dimensions": [
+          "Purpose and focus",
+          "Organization and sequence",
+          "Details, reasons, or evidence",
+          "Sentence construction and vocabulary",
+          "Conventions"
+        ],
+        "guidance": "Evaluate what is actually written. A non-response is insufficient evidence, not a zero. Record assistance, dictation, typing or handwriting. Do not equate length or typing fluency with writing ability. Review genre-specific features in the prompt. Grade 2 exit: linked sentences with a beginning and ending; Grade 3 organization is a readiness consideration."
+      },
+      "id": "writing-27",
+      "type": "writing",
+      "correct": null,
+      "options": [],
+      "answerRationale": "Parent rubric review required; no binary grade.",
+      "role": "prior-grade mastery",
+      "band": "B",
+      "passage": "",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/finalelaccssstandards.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    }
+  ]
+}

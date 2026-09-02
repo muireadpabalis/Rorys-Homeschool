@@ -36,12 +36,14 @@
     </div>
     <div class="progress-ring"><span id="overallPercent">0%</span><small>complete</small></div>
   </div>
+
   <div class="stats-grid">
     <article class="stat-card"><span class="stat-number" id="dueCount">0</span><span>Open assignments</span></article>
     <article class="stat-card"><span class="stat-number" id="completedCount">0</span><span>Completed assignments</span></article>
     <article class="stat-card"><span class="stat-number" id="minutesCount">0</span><span>Minutes logged</span></article>
     <article class="stat-card"><span class="stat-number" id="portfolioCount">0</span><span>Portfolio entries</span></article>
   </div>
+
   <div class="two-column">
     <section class="panel">
       <div class="panel-heading"><h3>Next assignments</h3><button class="link-button" data-go="assignments">View all</button></div>
@@ -54,11 +56,17 @@
   </div>
 </section>
 
+
 <section id="subjects" class="view">
-  <div class="section-heading"><div><p class="eyebrow">California Grade 3 Course of Study</p><h2>Subjects & Topics</h2></div></div>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">California Course of Study</p>
+      <h2>Subjects & Topics</h2>
+    </div>
+  </div>
   <div class="panel standards-note">
     <h3>How this site is organized</h3>
-    <p><strong>Instruction from this point forward follows California Grade 3 requirements and standards.</strong> Massachusetts Grade 2 standards are used only for Rory's initial baseline/exit diagnostics so we can identify what he had already been taught and mastered before homeschooling began.</p>
+    <p><strong>Instruction from this point forward follows California requirements and standards.</strong> Massachusetts standards are used only for baseline/exit diagnostics to identify what Rory had been taught and mastered before homeschooling began.</p>
   </div>
   <div id="subjectGrid" class="subject-grid"></div>
   <div id="subjectDetail" class="panel subject-detail" hidden></div>
@@ -73,7 +81,7 @@
     <select id="subjectFilter">
       <option value="all">All subjects</option><option>English Language Arts</option><option>Mathematics</option>
       <option>Science</option><option>History–Social Science</option><option>Health</option><option>Physical Education</option>
-      <option>Visual & Performing Arts</option><option>Technology & Digital Literacy</option>
+      <option>Fine Arts</option><option>Technology</option>
     </select>
     <select id="statusFilter"><option value="all">All statuses</option><option value="open">Open</option><option value="complete">Complete</option></select>
   </div>
@@ -81,10 +89,10 @@
 </section>
 
 <section id="assessments" class="view">
-  <div class="section-heading"><div><p class="eyebrow">Massachusetts Grade 2 Exit Baseline + Later California Progress Checks</p><h2>Assessments</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">Massachusetts Exit Baseline + Later Progress Checks</p><h2>Assessments</h2></div></div>
   <div class="assessment-intro panel">
-    <h3>Assessment Period</h3>
-    <p>Rory's initial baseline assessments use Massachusetts Grade 2 standards to establish where prior instruction left off. Grade 3 reach questions are readiness probes, not deficiencies if he has not yet been taught the material. After the baseline is complete, instruction and progress checks will be organized around California Grade 3 expectations.</p>
+    <h3>Assessment Week</h3>
+    <p>Rory's initial assessments use Massachusetts exit expectations as the core baseline, with separate prerequisite and California readiness probes, to establish where Grade 2 instruction left off. After the baseline is complete, instructional work and progress checks will be organized around California Grade 3 expectations.</p>
   </div>
   <div id="assessmentList" class="card-list"></div>
 </section>
@@ -95,7 +103,7 @@
     <label>Date<input type="date" id="logDate" required></label>
     <label>Subject<select id="logSubject" required>
       <option>English Language Arts</option><option>Mathematics</option><option>Science</option><option>History–Social Science</option>
-      <option>Health</option><option>Physical Education</option><option>Visual & Performing Arts</option><option>Technology & Digital Literacy</option>
+      <option>Health</option><option>Physical Education</option><option>Fine Arts</option><option>Technology</option>
     </select></label>
     <label>Minutes<input type="number" id="logMinutes" min="1" step="1" required></label>
     <label class="full">What did you work on?<textarea id="logActivity" rows="3" required></textarea></label>
@@ -110,7 +118,7 @@
     <div><p class="eyebrow">Work Samples</p><h2>Portfolio</h2></div>
     <button id="addPortfolioBtn" class="button">+ Add Work Sample</button>
   </div>
-  <p class="section-note">Save a title, description, date, subject, and optional link to a photo, PDF, document, artwork, or other work sample.</p>
+  <p class="section-note">Save a title, description, date, subject, and optional link to a photo, PDF, document, or other work sample.</p>
   <div id="portfolioList" class="card-list"></div>
 </section>
 
@@ -125,7 +133,7 @@
         <button id="exportJsonBtn" class="button">Export Full Record (.json)</button>
         <button id="exportCsvBtn" class="button secondary">Export Learning Log (.csv)</button>
       </div>
-      <p class="privacy-note"><strong>Important:</strong> this version stores progress in this browser. Export the full record regularly so the school record is backed up.</p>
+      <p class="privacy-note"><strong>Important:</strong> this starter version stores progress only in this browser. Export regularly so the record is backed up.</p>
     </article>
   </div>
 </section>
@@ -137,7 +145,7 @@
   <label>Title<input id="assignmentTitle" required></label>
   <label>Subject<select id="assignmentSubject">
     <option>English Language Arts</option><option>Mathematics</option><option>Science</option><option>History–Social Science</option>
-    <option>Health</option><option>Physical Education</option><option>Visual & Performing Arts</option><option>Technology & Digital Literacy</option>
+    <option>Health</option><option>Physical Education</option><option>Fine Arts</option><option>Technology</option>
   </select></label>
   <label>Due date<input type="date" id="assignmentDue"></label>
   <label>Description<textarea id="assignmentDescription" rows="4"></textarea></label>
@@ -152,7 +160,7 @@
   <label>Title<input id="portfolioTitle" required></label>
   <label>Subject<select id="portfolioSubject">
     <option>English Language Arts</option><option>Mathematics</option><option>Science</option><option>History–Social Science</option>
-    <option>Health</option><option>Physical Education</option><option>Visual & Performing Arts</option><option>Technology & Digital Literacy</option>
+    <option>Health</option><option>Physical Education</option><option>Fine Arts</option><option>Technology</option>
   </select></label>
   <label>Date<input type="date" id="portfolioDate" required></label>
   <label>Description<textarea id="portfolioDescription" rows="4"></textarea></label>
@@ -161,6 +169,8 @@
 </form>
 </dialog>
 
+<script src="portal-config.js"></script>
 <script src="app.js"></script>
+<script src="portal-extras.js"></script>
 </body>
 </html>
