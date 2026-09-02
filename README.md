@@ -1,29 +1,11 @@
-# Rory's Home School Portal — Full Version
+# Rory's Home School Portal
 
-GitHub Pages-ready static portal for Rory's 2026–2027 Grade 3 homeschool year.
+2026–2027 · Grade 3. Static GitHub Pages portal with assignments, five baseline assessments, learning logs, portfolio records, and parent diagnostic reports.
 
-## Includes
-- Dashboard
-- California Grade 3 subjects/topics
-- Assignments and completion tracking
-- Assessment tracking
-- Daily learning log with minutes
-- Portfolio/work samples
-- Printable progress reports
-- Full JSON record export
-- Learning-log CSV export
-- 45-question Math Baseline Assessment
+Start at `index.html`. Parents use Reports → Open parent reports to initialize a local passphrase and review/export completed diagnostics. Student diagnostics never display scores or answer keys.
 
-## Assessment rule
-The initial diagnostics establish where Massachusetts Grade 2 instruction left off. Ongoing instruction is organized around California Grade 3 expectations.
+Deploy the repository root through GitHub Pages. No build or package installation is required. Use an HTTP server for local preview; JSON assessment data cannot reliably load from file:// URLs.
 
-The Math Baseline:
-- requires all 45 questions to have a response before submission
-- includes E: "I don't know / I haven't been taught this yet."
-- gives Rory no correctness feedback, score, hints, or answer key
-- allows changing answers before final submission
-- locks after submission
-- downloads a parent JSON archive with item-level diagnostic metadata
+Records remain device/browser-local. Export Full Record regularly. Parent reports provide a conservative backup merge. A public static host cannot make source answer keys secret or prevent deliberate storage tampering.
 
-## GitHub upload
-Upload all files in this ZIP to the repository root, replacing older files with the same names.
+See [Implementation notes, standards, QA, and parent review](IMPLEMENTATION-NOTES.md).
