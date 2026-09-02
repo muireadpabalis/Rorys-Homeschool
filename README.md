@@ -1,22 +1,29 @@
-# Rory's Homeschool Portal — Math Diagnostic
+# Rory's Home School Portal — Full Version
 
-GitHub Pages-ready static site.
+GitHub Pages-ready static portal for Rory's 2026–2027 Grade 3 homeschool year.
 
-Upload these files to the repository root:
-- index.html
-- styles.css
-- app.js
-- math-assessment.html
-- math-assessment.js
-- .nojekyll
-- README.md
+## Includes
+- Dashboard
+- California Grade 3 subjects/topics
+- Assignments and completion tracking
+- Assessment tracking
+- Daily learning log with minutes
+- Portfolio/work samples
+- Printable progress reports
+- Full JSON record export
+- Learning-log CSV export
+- 45-question Math Baseline Assessment
 
-Assessment rules:
-- 45 questions
-- Every question must have a response before submission
-- Option E is "I don't know / I haven't been taught this yet."
-- No correctness feedback or score is shown to the student
-- Responses can be changed before submission
-- Progress saves in localStorage on the current browser/device
-- Submission locks the attempt
-- Parent archive downloads as JSON and includes item-level diagnostic metadata
+## Assessment rule
+The initial diagnostics establish where Massachusetts Grade 2 instruction left off. Ongoing instruction is organized around California Grade 3 expectations.
+
+The Math Baseline:
+- requires all 45 questions to have a response before submission
+- includes E: "I don't know / I haven't been taught this yet."
+- gives Rory no correctness feedback, score, hints, or answer key
+- allows changing answers before final submission
+- locks after submission
+- downloads a parent JSON archive with item-level diagnostic metadata
+
+## GitHub upload
+Upload all files in this ZIP to the repository root, replacing older files with the same names.
