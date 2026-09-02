@@ -1,0 +1,463 @@
+{
+  "student": "Rory",
+  "subject": "reading",
+  "title": "ELA / Reading Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "reading-1",
+      "type": "choice",
+      "prompt": "Which word has the same middle vowel sound as cat?",
+      "options": [
+        "Cake",
+        "Cup",
+        "Map",
+        "Coat",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-2",
+      "type": "choice",
+      "prompt": "Which word begins with the same sound as ship?",
+      "options": [
+        "Chip",
+        "Shop",
+        "Tip",
+        "Slip",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-3",
+      "type": "choice",
+      "prompt": "Which word has a long a sound?",
+      "options": [
+        "Cape",
+        "Cap",
+        "Can",
+        "Cat",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-4",
+      "type": "choice",
+      "prompt": "Which two smaller words make up sunset?",
+      "options": [
+        "Suns and eat",
+        "Sum and net",
+        "Sit and nest",
+        "Sun and set",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-5",
+      "type": "choice",
+      "prompt": "What word did Ben write?",
+      "options": [
+        "BENCH",
+        "GATE",
+        "BEANS",
+        "WIND",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place."
+    },
+    {
+      "id": "reading-6",
+      "type": "choice",
+      "prompt": "Which word has the same vowel sound as rain?",
+      "options": [
+        "Ran",
+        "Train",
+        "Tin",
+        "Ten",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-7",
+      "type": "choice",
+      "prompt": "Which word has two syllables?",
+      "options": [
+        "Rabbit",
+        "Cat",
+        "Splash",
+        "Dog",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-8",
+      "type": "choice",
+      "prompt": "What does reread mean?",
+      "options": [
+        "Stop reading",
+        "Read badly",
+        "Read silently",
+        "Read again",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-9",
+      "type": "choice",
+      "prompt": "What does helpful mean?",
+      "options": [
+        "Without help",
+        "Helping again",
+        "Full of help; useful",
+        "Someone who was helped yesterday",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-10",
+      "type": "choice",
+      "prompt": "What did Ben do after finding the sign?",
+      "options": [
+        "He wrote the letters for the first time.",
+        "He tied it to a stick.",
+        "He looked by the gate first.",
+        "He planted a tree.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place."
+    },
+    {
+      "id": "reading-11",
+      "type": "choice",
+      "prompt": "Why did the sign go under the bench?",
+      "options": [
+        "A strong wind blew it.",
+        "Ben buried it there.",
+        "Rain washed away the letters.",
+        "A bird carried it.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place."
+    },
+    {
+      "id": "reading-12",
+      "type": "choice",
+      "prompt": "What solved Ben's problem?",
+      "options": [
+        "Making the letters smaller",
+        "Looking only by the gate",
+        "Waiting for more wind",
+        "Tying the sign to a stick",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place."
+    },
+    {
+      "id": "reading-13",
+      "type": "choice",
+      "prompt": "How do we know Ben's plan worked?",
+      "options": [
+        "The sign had big letters.",
+        "There was a gate nearby.",
+        "The sign stayed in place the next windy day.",
+        "Ben used paper.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place."
+    },
+    {
+      "id": "reading-14",
+      "type": "choice",
+      "prompt": "What did Lina do before deciding what to do?",
+      "options": [
+        "She put the snail in a box.",
+        "She watched the snail.",
+        "She ran home.",
+        "She picked all the leaves.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do."
+    },
+    {
+      "id": "reading-15",
+      "type": "choice",
+      "prompt": "What lesson fits the story?",
+      "options": [
+        "Watching carefully can help us make a decision.",
+        "A box is always the best home for any animal.",
+        "The first idea is always the best idea.",
+        "Dry paths are the best places for snails to rest.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do."
+    },
+    {
+      "id": "reading-16",
+      "type": "choice",
+      "prompt": "How did the brother's first idea differ from Lina's?",
+      "options": [
+        "He wanted leaves; she wanted a box.",
+        "They both wanted to take the snail home.",
+        "He wanted to draw; she wanted to read.",
+        "He wanted a box; she chose to leave space near the leaves.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do."
+    },
+    {
+      "id": "reading-17",
+      "type": "choice",
+      "prompt": "What does damp mean?",
+      "options": [
+        "Very loud",
+        "Completely dark",
+        "A little wet",
+        "Very hard",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do."
+    },
+    {
+      "id": "reading-18",
+      "type": "choice",
+      "prompt": "What is this passage mostly about?",
+      "options": [
+        "How to follow a trail to a pond",
+        "How beavers build and live",
+        "How branches grow on trees",
+        "How people build boats",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim."
+    },
+    {
+      "id": "reading-19",
+      "type": "choice",
+      "prompt": "What do beavers use to build dams?",
+      "options": [
+        "Branches, mud, and stones",
+        "Glass, paint, and paper",
+        "Leaves only",
+        "Sand only",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim."
+    },
+    {
+      "id": "reading-20",
+      "type": "choice",
+      "prompt": "What happens when a dam slows the water?",
+      "options": [
+        "The stream immediately becomes dry everywhere.",
+        "The water begins flowing faster through the dam.",
+        "The pond becomes a mountain.",
+        "A pond forms.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim."
+    },
+    {
+      "id": "reading-21",
+      "type": "choice",
+      "prompt": "What is a lodge in this passage?",
+      "options": [
+        "A kind of plant food",
+        "A broad tail",
+        "A beaver's home",
+        "A tool for cutting trees",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim."
+    },
+    {
+      "id": "reading-22",
+      "type": "choice",
+      "prompt": "Why did the author most likely write this passage?",
+      "options": [
+        "To persuade everyone to buy a beaver",
+        "To explain how beavers live",
+        "To tell a pretend story about a talking beaver",
+        "To give directions to a zoo",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim."
+    },
+    {
+      "id": "reading-23",
+      "type": "choice",
+      "prompt": "Which detail explains how a lodge can help keep beavers safe?",
+      "options": [
+        "Its entrance is underwater.",
+        "Beavers eat plants.",
+        "Beavers carry branches in their mouths.",
+        "Their tails help them swim.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Beavers Build\nBeavers use branches, mud, and stones to build dams across streams. A dam slows the water and makes a pond. Beavers build homes called lodges in or beside the pond. An underwater entrance helps protect them from some other animals.\nBeavers eat plants. They carry branches with their mouths and move mud with their front paws. Their broad tails help them swim."
+    },
+    {
+      "id": "reading-24",
+      "type": "choice",
+      "prompt": "What do both texts describe?",
+      "options": [
+        "A trip to the beach",
+        "A child's lunch",
+        "A ride on a bicycle",
+        "A child's trip to school",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Ways to Travel\nText A: Maya walks to school with her dad. They see flowers along the path. Walking takes twenty minutes. Maya likes stopping to notice birds.\nText B: Owen rides a bus to school. The trip takes ten minutes. He talks to friends on the bus. He likes staying dry when it rains."
+    },
+    {
+      "id": "reading-25",
+      "type": "choice",
+      "prompt": "Which detail is only in Text B?",
+      "options": [
+        "Seeing flowers beside a path",
+        "Walking with Dad",
+        "Talking with friends on a bus",
+        "Taking twenty minutes",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Ways to Travel\nText A: Maya walks to school with her dad. They see flowers along the path. Walking takes twenty minutes. Maya likes stopping to notice birds.\nText B: Owen rides a bus to school. The trip takes ten minutes. He talks to friends on the bus. He likes staying dry when it rains."
+    },
+    {
+      "id": "reading-26",
+      "type": "choice",
+      "prompt": "Which word rhymes with ground?",
+      "options": [
+        "Green",
+        "Around",
+        "Leaves",
+        "Light",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Little Seed\nA little seed lay in the ground.\nThe rain came tapping all around.\nA green shoot rose to greet the light.\nTwo small leaves opened, fresh and bright."
+    },
+    {
+      "id": "reading-27",
+      "type": "choice",
+      "prompt": "You reach the end of a sentence and it does not make sense. What should you do?",
+      "options": [
+        "Reread it carefully and check the words.",
+        "Skip the sentence without checking it.",
+        "Change the words to match the ending you expected.",
+        "Read faster without thinking about the meaning.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-28",
+      "type": "choice",
+      "prompt": "Which detail best suggests the snail wanted a cooler, wetter place?",
+      "options": [
+        "Lina had a brother.",
+        "They were on their way home.",
+        "The brother spoke first.",
+        "It moved toward damp leaves and hid in the shade.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "A Home for a Snail\nLina found a snail on a dry path. Her brother wanted to put it in a box. Lina watched the snail move toward a patch of damp leaves. “Let's leave it near these leaves,” she said. They moved out of its way. Soon the snail was hidden in the shade. On the way home, Lina said that watching first had helped them decide what to do."
+    },
+    {
+      "id": "reading-29",
+      "type": "choice",
+      "prompt": "What does tying the sign show about Ben?",
+      "options": [
+        "He no longer wants a sign in the garden.",
+        "He expects the wind to blow the sign away again.",
+        "He learns from a problem and changes his plan.",
+        "He wants people to look under the bench for the sign.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Missing Sign\nBen made a sign for the class garden. He wrote BEANS in big letters. A strong wind blew the sign under a bench. Ben looked by the gate, but it was not there. Then he saw a corner of paper under the bench. He picked up the sign and tied it to a stick with string. The next windy day, the sign stayed in place."
+    },
+    {
+      "id": "reading-30",
+      "type": "choice",
+      "prompt": "What should you do right after the first fold?",
+      "options": [
+        "Pinch one end before making more folds.",
+        "Turn the paper over.",
+        "Spread the paper completely before continuing.",
+        "Move the finished fan back and forth.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Make a Paper Fan\nFirst, lay a sheet of paper on a table. Fold a narrow strip along one edge. Turn the paper over and fold another strip. Keep turning and folding. Last, pinch one end and spread the other end. Move the fan back and forth to feel a breeze."
+    },
+    {
+      "id": "reading-31",
+      "type": "choice",
+      "prompt": "A book has sections called Food, Homes, and Young. Where would you look to learn what an animal eats?",
+      "options": [
+        "Food",
+        "Homes",
+        "Young",
+        "The page number alone",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-32",
+      "type": "choice",
+      "prompt": "If a knot is untied, what has happened?",
+      "options": [
+        "It has been tied more tightly.",
+        "It has changed color.",
+        "It has been tied twice.",
+        "The tying has been undone.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": ""
+    },
+    {
+      "id": "reading-33",
+      "type": "choice",
+      "prompt": "Which statement uses information from both texts?",
+      "options": [
+        "Maya and Owen both ride buses.",
+        "Maya never sees birds.",
+        "Owen's trip takes less time than Maya's.",
+        "Owen always walks in the rain.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Two Ways to Travel\nText A: Maya walks to school with her dad. They see flowers along the path. Walking takes twenty minutes. Maya likes stopping to notice birds.\nText B: Owen rides a bus to school. The trip takes ten minutes. He talks to friends on the bus. He likes staying dry when it rains."
+    },
+    {
+      "id": "reading-34",
+      "type": "choice",
+      "prompt": "What does rose to greet the light mean in the poem?",
+      "options": [
+        "The shoot said hello aloud.",
+        "The shoot grew up toward the light.",
+        "The seed became a rose flower at once.",
+        "The rain carried the seed away.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "The Little Seed\nA little seed lay in the ground.\nThe rain came tapping all around.\nA green shoot rose to greet the light.\nTwo small leaves opened, fresh and bright."
+    },
+    {
+      "id": "reading-35",
+      "type": "choice",
+      "prompt": "Why must you make folds before spreading the fan?",
+      "options": [
+        "The folds let the paper open into the fan shape.",
+        "The folds show where to cut the paper into strips.",
+        "The folds make the paper absorb water.",
+        "The folds keep both ends closed so the fan cannot spread.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "passage": "Make a Paper Fan\nFirst, lay a sheet of paper on a table. Fold a narrow strip along one edge. Turn the paper over and fold another strip. Keep turning and folding. Last, pinch one end and spread the other end. Move the fan back and forth to feel a breeze."
+    }
+  ]
+}

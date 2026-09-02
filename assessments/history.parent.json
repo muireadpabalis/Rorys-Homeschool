@@ -1,0 +1,953 @@
+{
+  "student": "Rory",
+  "subject": "history",
+  "title": "History–Social Science / Geography Baseline",
+  "version": "2026.1",
+  "questions": [
+    {
+      "id": "history-1",
+      "type": "choice",
+      "band": "A",
+      "domain": "Chronology",
+      "topic": "Chronology",
+      "skill": "Before and after",
+      "ma": "MA HSS practice 3: chronology",
+      "ca": "CA HSS K–5 chronology",
+      "prompt": "Which usually happens first in a school day?",
+      "options": [
+        "Eating lunch at school",
+        "Leaving school in the afternoon",
+        "Arriving at school",
+        "Finishing the last class",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Arriving at school",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-2",
+      "type": "choice",
+      "band": "A",
+      "domain": "Historical sources",
+      "topic": "Historical sources",
+      "skill": "Past and present",
+      "ma": "MA HSS practices 3–5",
+      "ca": "CA HSS K–5 research",
+      "prompt": "What could show how a street looked long ago?",
+      "options": [
+        "A photograph of a different street taken today",
+        "An old photograph of the street",
+        "A plan showing a proposed road next year",
+        "A map of the street with no date or buildings",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: An old photograph of the street",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-3",
+      "type": "choice",
+      "band": "A",
+      "domain": "Civics",
+      "topic": "Civics",
+      "skill": "Purpose of rules",
+      "ma": "MA Grade 1 civics prerequisite",
+      "ca": "3.4 prerequisite",
+      "prompt": "Why might a playground have a rule about taking turns?",
+      "options": [
+        "To help people share equipment fairly",
+        "To give one person all the time on the equipment",
+        "To make every game have the same winner",
+        "To avoid sharing decisions with anyone",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: To help people share equipment fairly",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-4",
+      "type": "choice",
+      "band": "A",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Map purpose",
+      "ma": "2.T1 prerequisite",
+      "ca": "3.1",
+      "prompt": "What can a map help you find?",
+      "options": [
+        "The age of every building without labels",
+        "The population of every town without data",
+        "The weather for every future day",
+        "Where places are located",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Where places are located",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-5",
+      "type": "choice",
+      "band": "A",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Needs and wants",
+      "ma": "2.T5 prerequisite",
+      "ca": "3.5 prerequisite",
+      "prompt": "Which is a basic need?",
+      "options": [
+        "A new video game",
+        "A decorative sticker",
+        "Safe drinking water",
+        "A toy robot",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Safe drinking water",
+      "passage": "",
+      "role": "prerequisite",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-6",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Map key",
+      "ma": "2.T1.1",
+      "ca": "3.1",
+      "prompt": "According to the key, what does a star mark?",
+      "options": [
+        "A river",
+        "The library",
+        "A mountain",
+        "A farm",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: The library",
+      "passage": "Neighborhood map — north ↑\n\n          Pond\nHill      School      Park\n          ★\n\nKey: ★ = Library",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-7",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Cardinal directions",
+      "ma": "2.T1.1",
+      "ca": "3.1",
+      "prompt": "North is up. From the School, which direction is the Park?",
+      "options": [
+        "East",
+        "West",
+        "South",
+        "North",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: East",
+      "passage": "Neighborhood map — north ↑\n\n          Pond\nHill      School      Park\n          ★\n\nKey: ★ = Library",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-8",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Map relationships",
+      "ma": "2.T1.1",
+      "ca": "3.1",
+      "prompt": "Which place is south of the School?",
+      "options": [
+        "The pond",
+        "The park",
+        "The hill",
+        "The library",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: The library",
+      "passage": "Neighborhood map — north ↑\n\n          Pond\nHill      School      Park\n          ★\n\nKey: ★ = Library",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-9",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Map scale",
+      "ma": "2.T1.1",
+      "ca": "3.1",
+      "prompt": "A map says one small square represents one block. A walk covers three squares. How many blocks is that?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Six",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Three",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-10",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Continent",
+      "ma": "2.T2.1",
+      "ca": "3.1 prerequisite",
+      "prompt": "Which is a continent?",
+      "options": [
+        "California",
+        "Africa",
+        "Boston",
+        "Pacific Ocean",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Africa",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-11",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Ocean",
+      "ma": "2.T2.2",
+      "ca": "3.1 prerequisite",
+      "prompt": "Which ocean is beside California's coast?",
+      "options": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Pacific Ocean",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-12",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Landform",
+      "ma": "2.T2.1",
+      "ca": "3.1",
+      "prompt": "Which describes an island?",
+      "options": [
+        "A stream that flows downhill",
+        "A high area always attached to every continent",
+        "A road between two houses",
+        "Land surrounded by water",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Land surrounded by water",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-13",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Settlement near water",
+      "ma": "2.T2.3–4",
+      "ca": "3.1",
+      "prompt": "Why have many communities grown near rivers?",
+      "options": [
+        "Rivers remove the need for growing food.",
+        "Rivers make all settlements safe from floods.",
+        "Rivers can provide water and transportation.",
+        "Rivers provide identical conditions in every place.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Rivers can provide water and transportation.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-14",
+      "type": "choice",
+      "band": "B",
+      "domain": "Geography",
+      "topic": "Geography",
+      "skill": "Adaptation",
+      "ma": "2.T2.4",
+      "ca": "3.1",
+      "prompt": "Which is an example of adapting to cold weather?",
+      "options": [
+        "Changing a town’s name",
+        "Wearing warm clothing",
+        "Wearing thin summer clothing in the snow",
+        "Choosing housing without considering the climate",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Wearing warm clothing",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-15",
+      "type": "choice",
+      "band": "B",
+      "domain": "Migration and culture",
+      "topic": "Migration and culture",
+      "skill": "Reasons for migration",
+      "ma": "2.T3.1",
+      "ca": "3.3 related local-history domain",
+      "prompt": "A family moves to be closer to a new job. What is one reason for its move?",
+      "options": [
+        "Work",
+        "Visiting for one afternoon",
+        "Returning home after a short vacation",
+        "Making a temporary stop without changing where the family lives",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Work",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-16",
+      "type": "choice",
+      "band": "B",
+      "domain": "Migration and culture",
+      "topic": "Migration and culture",
+      "skill": "Forced migration",
+      "ma": "2.T3.1",
+      "ca": "3.3 related local-history domain",
+      "prompt": "A family must leave because fighting makes its home unsafe. Which best describes the move?",
+      "options": [
+        "A vacation chosen only for fun",
+        "A trip to buy one item and return in an hour",
+        "A move because every home is identical",
+        "Leaving to seek safety, rather than freely choosing to stay",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Leaving to seek safety, rather than freely choosing to stay",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-17",
+      "type": "choice",
+      "band": "B",
+      "domain": "Migration and culture",
+      "topic": "Migration and culture",
+      "skill": "Culture",
+      "ma": "2.T3.4",
+      "ca": "3.2 and 3.3 related domains",
+      "prompt": "Which is an example of a cultural tradition?",
+      "options": [
+        "The measured length of a river",
+        "The height of a nearby hill",
+        "A family celebration passed between generations",
+        "The amount of rain on one day",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: A family celebration passed between generations",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-18",
+      "type": "choice",
+      "band": "B",
+      "domain": "Historical sources",
+      "topic": "Historical sources",
+      "skill": "Interview",
+      "ma": "2.T3.3",
+      "ca": "3.3",
+      "prompt": "Which question would help learn why a relative moved to a new town?",
+      "options": [
+        "What is your favorite color now?",
+        "What made you decide to move here?",
+        "What do you plan to eat tomorrow?",
+        "Which room in your home is largest?",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: What made you decide to move here?",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-19",
+      "type": "choice",
+      "band": "B",
+      "domain": "Civics",
+      "topic": "Civics",
+      "skill": "Country and continent",
+      "ma": "2.T4.1",
+      "ca": "3.1 prerequisite",
+      "prompt": "Which statement is correct?",
+      "options": [
+        "Egypt is a country in Africa.",
+        "Africa is a city in Egypt.",
+        "Every continent has only one country.",
+        "A country is the same thing as an ocean.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Egypt is a country in Africa.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-20",
+      "type": "choice",
+      "band": "B",
+      "domain": "Civics",
+      "topic": "Civics",
+      "skill": "Purpose of government",
+      "ma": "2.T4.2",
+      "ca": "3.4",
+      "prompt": "Which is a service a local government may provide?",
+      "options": [
+        "Choosing every family’s meals",
+        "Telling everyone which hobby to enjoy",
+        "Selling every item in a private store",
+        "Maintaining public roads",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Maintaining public roads",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-21",
+      "type": "choice",
+      "band": "B",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Natural resources and jobs",
+      "ma": "2.T5.1",
+      "ca": "3.5",
+      "prompt": "Why might fishing jobs be common near the ocean?",
+      "options": [
+        "Every coastal resident is required to fish.",
+        "Fish are equally available in every inland location.",
+        "Fish are a natural resource found there.",
+        "Living near the ocean prevents selling fish elsewhere.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Fish are a natural resource found there.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-22",
+      "type": "choice",
+      "band": "B",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Renewable resource",
+      "ma": "2.T5.2",
+      "ca": "3.5 related resource domain",
+      "prompt": "Which resource can regrow when managed carefully?",
+      "options": [
+        "Coal",
+        "Trees",
+        "Petroleum",
+        "Metal ore deposits",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Trees",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-23",
+      "type": "choice",
+      "band": "B",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Income",
+      "ma": "2.T5.4",
+      "ca": "3.5",
+      "prompt": "What are wages?",
+      "options": [
+        "Money earned for work",
+        "Money paid to buy a product",
+        "Money borrowed and owed back",
+        "A price listed on an item in a store",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Money earned for work",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-24",
+      "type": "choice",
+      "band": "B",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Goods and services",
+      "ma": "2.T5 economics expectations",
+      "ca": "3.5",
+      "prompt": "Which is a service?",
+      "options": [
+        "A loaf of bread",
+        "A pair of shoes",
+        "A bag of apples",
+        "Repairing a bicycle",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Repairing a bicycle",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-25",
+      "type": "choice",
+      "band": "B",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Choice and scarcity",
+      "ma": "2.T5 economics expectations",
+      "ca": "3.5",
+      "prompt": "You have enough money for a book or a toy, but not both. What must you do?",
+      "options": [
+        "Buy both without changing the budget.",
+        "Treat the toy as free because you want it.",
+        "Choose how to use your limited money.",
+        "Assume the two prices do not matter.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Choose how to use your limited money.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-26",
+      "type": "choice",
+      "band": "B",
+      "domain": "Historical sources",
+      "topic": "Historical sources",
+      "skill": "Compare sources",
+      "ma": "MA HSS practices 3–5",
+      "ca": "CA HSS K–5 research",
+      "prompt": "Two people remember a town event differently. What could help you learn more?",
+      "options": [
+        "Accept only the more confident speaker.",
+        "Compare their memories with photographs and records.",
+        "Choose the version that makes the event sound most exciting.",
+        "Use a picture from a different event without checking its date.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Compare their memories with photographs and records.",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-27",
+      "type": "choice",
+      "band": "B",
+      "domain": "Chronology",
+      "topic": "Chronology",
+      "skill": "Timeline",
+      "ma": "MA HSS practice 3",
+      "ca": "CA HSS K–5 chronology",
+      "prompt": "A timeline lists: 1900 school opens; 1950 library opens; 2000 park opens. Which opened between the other two?",
+      "options": [
+        "Library",
+        "School",
+        "Park",
+        "All opened together",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Library",
+      "passage": "",
+      "role": "prior-grade mastery",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-28",
+      "type": "choice",
+      "band": "C",
+      "domain": "Local history",
+      "topic": "Local history",
+      "skill": "Change over time",
+      "ma": "MA Grade 3 readiness: local history",
+      "ca": "3.3",
+      "prompt": "Old maps show farms where stores stand today. What does this show?",
+      "options": [
+        "The stores were present in exactly the same places on both maps.",
+        "The population stayed exactly the same according to these maps alone.",
+        "All farms in the region disappeared at once.",
+        "Land use in the community changed.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Land use in the community changed.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-29",
+      "type": "choice",
+      "band": "C",
+      "domain": "California communities",
+      "topic": "California communities",
+      "skill": "Indigenous communities and place",
+      "ma": "MA Grade 3 readiness: Native peoples; CA local context",
+      "ca": "3.2",
+      "prompt": "Why should we learn about the Indigenous peoples of the place where we live?",
+      "options": [
+        "All Indigenous peoples shared one identical history.",
+        "Their connections to a place only began after modern towns were built.",
+        "They have histories, cultures, and continuing connections to that place.",
+        "Their history has no connection to communities living today.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: They have histories, cultures, and continuing connections to that place.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-30",
+      "type": "choice",
+      "band": "C",
+      "domain": "California communities",
+      "topic": "California communities",
+      "skill": "Environment and resources",
+      "ma": "MA Grade 3 readiness: Native peoples; CA local context",
+      "ca": "3.2",
+      "prompt": "Coastal and inland communities may have used different foods and building materials. Why?",
+      "options": [
+        "Every location offered identical resources.",
+        "Available resources differed by location.",
+        "Communities could not adapt to their surroundings.",
+        "Building materials were unrelated to local conditions.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Available resources differed by location.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-31",
+      "type": "choice",
+      "band": "C",
+      "domain": "Civics",
+      "topic": "Civics",
+      "skill": "Local decision-making",
+      "ma": "MA Grade 3 readiness: local government",
+      "ca": "3.4",
+      "prompt": "Residents want a safer street crossing. What is a constructive civic action?",
+      "options": [
+        "Bring their concern and evidence to the local government.",
+        "Remove all road signs themselves.",
+        "Refuse to listen to anyone else.",
+        "Assume no public decisions can ever change.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: Bring their concern and evidence to the local government.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-32",
+      "type": "choice",
+      "band": "C",
+      "domain": "Civics",
+      "topic": "Civics",
+      "skill": "Branches of government",
+      "ma": "MA later elementary civics readiness",
+      "ca": "3.4",
+      "prompt": "Which task belongs to a legislature?",
+      "options": [
+        "Enforcing laws as police officers",
+        "Deciding court cases as judges",
+        "Carrying out laws as an executive",
+        "Making laws",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 3,
+      "answerRationale": "The keyed response is: Making laws",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-33",
+      "type": "choice",
+      "band": "C",
+      "domain": "Economics",
+      "topic": "Economics",
+      "skill": "Trade and interdependence",
+      "ma": "MA economics readiness",
+      "ca": "3.5",
+      "prompt": "One community grows food and another makes tools. How can trade help?",
+      "options": [
+        "Each must produce everything it uses without exchange.",
+        "Only the tool-making community receives anything useful.",
+        "Each can obtain useful goods made by the other.",
+        "Only the food-growing community receives anything useful.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 2,
+      "answerRationale": "The keyed response is: Each can obtain useful goods made by the other.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-34",
+      "type": "choice",
+      "band": "C",
+      "domain": "Historical reasoning",
+      "topic": "Historical reasoning",
+      "skill": "Evidence and claim",
+      "ma": "MA HSS practices: explanation readiness",
+      "ca": "3.3",
+      "prompt": "Which evidence best supports a claim that a town grew?",
+      "options": [
+        "One house was repainted.",
+        "Records show its population increased from 500 to 2,000.",
+        "A visitor enjoyed the town.",
+        "A store changed its name without adding space.",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 1,
+      "answerRationale": "The keyed response is: Records show its population increased from 500 to 2,000.",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    },
+    {
+      "id": "history-35",
+      "type": "choice",
+      "band": "C",
+      "domain": "Local history",
+      "topic": "Local history",
+      "skill": "Research question",
+      "ma": "MA HSS practices: inquiry readiness",
+      "ca": "3.3",
+      "prompt": "Which question could you investigate using old and new maps?",
+      "options": [
+        "How have the town's roads changed?",
+        "What will the population be exactly fifty years from now?",
+        "Which resident likes every road best?",
+        "What did all residents think when each road was built?",
+        "I don't know / I haven't been taught this yet."
+      ],
+      "correct": 0,
+      "answerRationale": "The keyed response is: How have the town's roads changed?",
+      "passage": "",
+      "role": "current-grade readiness",
+      "sources": [
+        "https://www.doe.mass.edu/frameworks/hss/2018-12.pdf",
+        "https://www.cde.ca.gov/be/st/ss/documents/histsocscistnd.pdf"
+      ],
+      "mappingNote": "Related standard/expectation; this item samples a component and does not establish full standard mastery."
+    }
+  ]
+}
