@@ -43,64 +43,39 @@ function renderReports(){const by={};data.logs.forEach(l=>{by[l.subject]??={minu
 
 const californiaSubjects = [
   {
-    id:"ela", name:"English Language Arts", status:"Core California Grade 7",
-    summary:"Literature, informational reading, writing, language, speaking, listening, research, and evidence.",
-    topics:["Reading: Literature","Reading: Informational Text","Argument Writing","Informative/Explanatory Writing","Narrative Writing","Research & Source Citation","Language & Grammar","Vocabulary","Speaking & Listening"]
+    id:"ela", name:"English Language Arts", status:"Core California Grade 3",
+    summary:"Grade 3 reading, writing, language, speaking, listening, fluency, and word study.",
+    topics:["Reading: Literature","Reading: Informational Text","Foundational Skills & Fluency","Opinion Writing","Informative/Explanatory Writing","Narrative Writing","Language & Grammar","Vocabulary & Word Study","Speaking & Listening","Handwriting & Cursive"]
   },
   {
-    id:"math", name:"Mathematics", status:"Core California Grade 7",
-    summary:"California Grade 7 mathematics standards and mathematical practices.",
-    topics:["Ratios & Proportional Relationships","The Number System","Expressions & Equations","Geometry","Statistics & Probability","Mathematical Practices"]
+    id:"math", name:"Mathematics", status:"Core California Grade 3",
+    summary:"California Grade 3 mathematics standards and mathematical practices.",
+    topics:["Multiplication & Division","Properties of Operations","Two-Step Word Problems","Place Value & Multi-Digit Arithmetic","Fractions","Measurement & Data","Area & Perimeter","Geometry","Mathematical Practices"]
   },
   {
-    id:"science", name:"Science (CA NGSS)", status:"Core California Middle School",
-    summary:"California Next Generation Science Standards using middle-school physical, life, Earth/space, and engineering practices.",
-    topics:["Physical Science","Life Science","Earth & Space Science","Engineering Design","Science & Engineering Practices","Crosscutting Concepts"]
+    id:"science", name:"Science (CA NGSS)", status:"Core California Grade 3",
+    summary:"Grade 3 physical, life, and Earth science through investigation, models, evidence, and design.",
+    topics:["Forces & Interactions","Life Cycles","Inherited Traits & Variation","Organisms, Habitats & Survival","Fossils & Past Environments","Weather & Climate","Environmental Impacts","Engineering Design","Science & Engineering Practices"]
   },
   {
-    id:"social", name:"History–Social Science", status:"Core California Grade 7",
-    summary:"California Grade 7 history–social science with geography, civics, economics, and historical analysis.",
-    topics:["World History & Geography","Medieval & Early Modern Civilizations","Historical Analysis","Geography","Civics & Government","Economics","Primary & Secondary Sources"]
+    id:"social", name:"History–Social Science", status:"Core California Grade 3",
+    summary:"Continuity and change in Rory’s region through geography, community history, civics, and economics.",
+    topics:["Local Physical & Human Geography","American Indian Nations of the Local Region","Community History & Change","Maps, Photographs & Oral Histories","Rules, Laws & Citizenship","Local, State & Federal Government","Landmarks, Symbols & Civic Ideals","Local Economy & Choices"]
   },
   {
-    id:"worldlang", name:"World Language", status:"California course-of-study area",
-    summary:"World-language study beginning no later than Grade 7, with communication across listening, speaking, reading, and writing.",
-    topics:["Interpretive Communication","Interpersonal Communication","Presentational Communication","Cultures","Connections","Language Structures"]
+    id:"pe", name:"Physical Education", status:"California Grade 3 course area",
+    summary:"Grade 3 movement skills, fitness, safe activity, cooperation, and personal progress.",
+    topics:["Movement Skills & Patterns","Movement Concepts","Warm-Up & Cool-Down","Aerobic Activity","Strength & Flexibility","Safe Participation","Cooperation & Group Goals","Physical Activity Log"]
   },
   {
-    id:"pe", name:"Physical Education", status:"California course-of-study area",
-    summary:"Fitness, movement skills, physical activity, and knowledge supporting health and vigor.",
-    topics:["Physical Fitness","Movement Skills","Individual & Dual Activities","Team Activities","Fitness Planning","Physical Activity Log"]
+    id:"arts", name:"Visual & Performing Arts", status:"California Grade 3 course area",
+    summary:"Grade 3 creating, performing or presenting, responding, and connecting through the arts.",
+    topics:["Visual Arts","Music","Theatre","Dance","Media Arts","Creating","Performing & Presenting","Responding","Connecting"]
   },
   {
-    id:"arts", name:"Visual & Performing Arts", status:"California course-of-study area",
-    summary:"Creative expression and aesthetic understanding across California's arts disciplines.",
-    topics:["Visual Arts","Music","Theatre","Dance","Media Arts","Creating","Performing/Presenting","Responding","Connecting"]
-  },
-  {
-    id:"applied", name:"Applied Arts", status:"California course-of-study area",
-    summary:"Practical applied learning such as consumer skills, industrial arts, business, agriculture, and home/life applications.",
-    topics:["Consumer Skills","Personal Finance Foundations","Design & Making","General Business","Agriculture & Environment","Home & Life Skills"]
-  },
-  {
-    id:"cte", name:"Career Technical Education", status:"California course-of-study area",
-    summary:"Career awareness and technical learning connected to interests, occupations, and real-world skills.",
-    topics:["Career Exploration","Workplace Skills","Problem Solving","Technical Communication","Projects & Design","Career Pathway Awareness"]
-  },
-  {
-    id:"health", name:"Health Education", status:"California standards / school readiness",
-    summary:"Age-appropriate health knowledge and decision-making aligned to California health standards.",
-    topics:["Personal & Community Health","Nutrition & Physical Activity","Mental, Emotional & Social Health","Injury Prevention & Safety","Alcohol, Tobacco & Other Drugs","Growth, Development & Sexual Health"]
-  },
-  {
-    id:"cs", name:"Computer Science & Digital Literacy", status:"California standards / supplemental",
-    summary:"Middle-school computing, data, algorithms, programming, networks, impacts of computing, and responsible digital work.",
-    topics:["Computing Systems","Networks & Internet","Data & Analysis","Algorithms & Programming","Impacts of Computing","Digital Citizenship"]
-  },
-  {
-    id:"driver", name:"Driver Education", status:"California Grades 7–12 course-of-study area",
-    summary:"A statutory California course-of-study area for grades 7–12; not treated as a Grade 7 baseline test.",
-    topics:["Traffic Laws","Personal Responsibility","Traffic Safety","Causes & Consequences of Collisions","Motorcycle Awareness","Safe Road Use"]
+    id:"health", name:"Health Education", status:"California Grade 3 course area",
+    summary:"Age-appropriate health knowledge, safety, relationships, decision-making, nutrition, and well-being.",
+    topics:["Growth & Development","Body Parts & Healthy Growth","Friendships, Family & Responsibility","Healthy Social Behavior & Respect","Personal Boundaries & Trusted Adults","Coping with Stress, Loss & Change","Personal & Community Health","Health Decisions, Goals & Helping Others"]
   }
 ];
 
