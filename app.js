@@ -27,13 +27,13 @@ const mathAssessment=data.assessments?.find(a=>a.id==="math"); if(mathAssessment
 const mathAssignment=data.assignments?.find(a=>a.subject==="Mathematics"&&a.title.includes("Diagnostic")); if(mathAssignment && !mathAssignment.link) mathAssignment.link="math-assessment.html";
 persistRecord();
 function persistRecord(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));return true}catch(error){alert("Your changes could not be saved. Export your records now and free browser storage before continuing.");return false}}
-function saveData(){persistRecord();renderAll()}
+function saveData(){if(!persistRecord()){try{const raw=localStorage.getItem(STORAGE_KEY);if(raw)data=JSON.parse(raw)}catch(error){}}renderAll()}
 function esc(s=""){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function niceDate(d){if(!d)return"No date";return new Date(d+"T12:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"})}
 function setView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.view===id));window.scrollTo({top:0,behavior:"smooth"})}
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>setView(t.dataset.view));document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>setView(b.dataset.go));
-function renderDashboard(){const c=data.assignments.filter(a=>a.complete).length,t=data.assignments.length,p=t?Math.round(c/t*100):0;overallPercent.textContent=p+"%";dueCount.textContent=t-c;completedCount.textContent=c;minutesCount.textContent=data.logs.reduce((s,l)=>s+Number(l.minutes||0),0);portfolioCount.textContent=data.portfolio.length;todayText.textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});const next=[...data.assignments].filter(a=>!a.complete).sort((a,b)=>(a.due||"9999").localeCompare(b.due||"9999")).slice(0,4);nextAssignments.innerHTML=next.length?next.map(a=>`<div class="mini-card"><span class="badge">${esc(a.subject)}</span><h3>${esc(a.title)}</h3><div class="meta">${a.due?"Due "+niceDate(a.due):"No due date"}</div></div>`).join(""):`<p class="empty">No open assignments.</p>`;const logs=[...data.logs].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,4);recentLogs.innerHTML=logs.length?logs.map(l=>`<div class="mini-card"><span class="badge">${esc(l.subject)}</span><h3>${esc(l.activity)}</h3><div class="meta">${niceDate(l.date)} · ${l.minutes} min</div></div>`).join(""):`<p class="empty">No learning logs yet.</p>`}
-function renderAssignments(){const sf=subjectFilter.value,st=statusFilter.value;const f=data.assignments.filter(a=>(sf==="all"||a.subject===sf)&&(st==="all"||(st==="complete"&&a.complete)||(st==="open"&&!a.complete)));assignmentList.innerHTML=f.length?f.map(a=>`<article class="record-card"><span class="badge ${a.complete?"complete":""}">${a.complete?"Complete":esc(a.subject)}</span><h3>${esc(a.title)}</h3><div class="meta">${esc(a.subject)}${a.due?" · Due "+niceDate(a.due):""}${a.completedDate?" · Finished "+niceDate(a.completedDate):""}</div>${a.description?`<p>${esc(a.description)}</p>`:""}<div class="actions"><button onclick="toggleAssignment('${a.id}')">${a.complete?"Mark Open":"Mark Complete"}</button>${a.link?`<a href="${esc(a.link)}" target="_blank">Open Resource</a>`:""}<button onclick="deleteAssignment('${a.id}')">Delete</button></div></article>`).join(""):`<p class="empty">No assignments match these filters.</p>`}
+function renderDashboard(){const c=data.assignments.filter(a=>a.complete).length,t=data.assignments.length;overallPercent.textContent=c+" of "+t;dueCount.textContent=t-c;completedCount.textContent=c;minutesCount.textContent=data.logs.reduce((s,l)=>s+Number(l.minutes||0),0);portfolioCount.textContent=data.portfolio.length;todayText.textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric",year:"numeric"});const next=[...data.assignments].filter(a=>!a.complete).sort((a,b)=>(a.due||"9999").localeCompare(b.due||"9999")).slice(0,4);nextAssignments.innerHTML=next.length?next.map(a=>`<div class="mini-card"><span class="badge">${esc(a.subject)}</span><h3>${esc(a.title)}</h3><div class="meta">${a.due?"Due "+niceDate(a.due):"No due date"}</div></div>`).join(""):`<p class="empty">No open assignments.</p>`;const logs=[...data.logs].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,4);recentLogs.innerHTML=logs.length?logs.map(l=>`<div class="mini-card"><span class="badge">${esc(l.subject)}</span><h3>${esc(l.activity)}</h3><div class="meta">${niceDate(l.date)} · ${l.minutes} min</div></div>`).join(""):`<p class="empty">No learning logs yet.</p>`}
+function renderAssignments(){const sf=subjectFilter.value,st=statusFilter.value;const f=data.assignments.filter(a=>(sf==="all"||a.subject===sf)&&(st==="all"||(st==="complete"&&a.complete)||(st==="open"&&!a.complete)));assignmentList.innerHTML=f.length?f.map(a=>`<article class="record-card" data-assignment-id="${esc(a.id)}"><span class="badge ${a.complete?"complete":""}">${a.complete?"Complete":esc(a.subject)}</span><h3>${esc(a.title)}</h3><div class="meta">${esc(a.subject)}${a.due?" · Due "+niceDate(a.due):""}${a.completedDate?" · Finished "+niceDate(a.completedDate):""}</div>${a.description?`<p>${esc(a.description)}</p>`:""}<div class="actions"><button onclick="toggleAssignment('${a.id}')">${a.complete?"Mark Open":"Mark Complete"}</button>${a.link?`<a href="${esc(a.link)}" target="_blank">Open Resource</a>`:""}<button onclick="deleteAssignment('${a.id}')">Delete</button></div></article>`).join(""):`<p class="empty">No assignments match these filters.</p>`}
 window.toggleAssignment=id=>{const a=data.assignments.find(x=>x.id===id);a.complete=!a.complete;a.completedDate=a.complete?new Date().toISOString().slice(0,10):"";saveData()};window.deleteAssignment=id=>{if(confirm("Delete this assignment?")){data.assignments=data.assignments.filter(x=>x.id!==id);saveData()}};
 function renderAssessments(){assessmentList.innerHTML=data.assessments.map(a=>`<article class="record-card"><span class="badge">${esc(a.subject)}</span><h3>${esc(a.title)}</h3><div class="meta">${niceDate(a.date)} · ${esc(a.status)}</div><div class="form-grid" style="margin-top:14px;margin-bottom:0"><label>Status<select onchange="updateAssessment('${a.id}','status',this.value)">${["Not started","In progress","Complete"].map(v=>`<option ${a.status===v?"selected":""}>${v}</option>`).join("")}</select></label><label>Score / result<input value="${esc(a.score)}" onchange="updateAssessment('${a.id}','score',this.value)"></label><label>Assessment link<input value="${esc(a.link)}" onchange="updateAssessment('${a.id}','link',this.value)" placeholder="https://..."></label><label class="full">Notes / skills to revisit<textarea rows="3" onchange="updateAssessment('${a.id}','notes',this.value)">${esc(a.notes)}</textarea></label></div>${a.link?`<div class="actions"><a href="${esc(a.link)}" target="_blank">Open Assessment</a></div>`:""}</article>`).join("")}
 window.updateAssessment=(id,f,v)=>{data.assessments.find(a=>a.id===id)[f]=v;saveData()};
@@ -53,12 +53,12 @@ const californiaSubjects = [
     topics:["Multiplication & Division","Properties of Operations","Two-Step Word Problems","Place Value & Multi-Digit Arithmetic","Fractions","Measurement & Data","Area & Perimeter","Geometry","Mathematical Practices"]
   },
   {
-    id:"science", name:"Science (CA NGSS)", status:"Core California Grade 3",
+    id:"science", name:"Science (CA NGSS)", recordSubject:"Science", status:"Core California Grade 3", courseLink:"science.html", courseLabel:"Open Rory’s seven-week Science Lab",
     summary:"Grade 3 physical, life, and Earth science through investigation, models, evidence, and design.",
     topics:["Forces & Interactions","Life Cycles","Inherited Traits & Variation","Organisms, Habitats & Survival","Fossils & Past Environments","Weather & Climate","Environmental Impacts","Engineering Design","Science & Engineering Practices"]
   },
   {
-    id:"social", name:"History–Social Science", status:"Core California Grade 3",
+    id:"social", name:"History–Social Science", status:"Core California Grade 3", courseLink:"history.html", courseLabel:"Open Rory’s seven-week Community Explorer course",
     summary:"Continuity and change in Rory’s region through geography, community history, civics, and economics.",
     topics:["Local Physical & Human Geography","American Indian Nations of the Local Region","Community History & Change","Maps, Photographs & Oral Histories","Rules, Laws & Citizenship","Local, State & Federal Government","Landmarks, Symbols & Civic Ideals","Local Economy & Choices"]
   },
@@ -68,12 +68,12 @@ const californiaSubjects = [
     topics:["Movement Skills & Patterns","Movement Concepts","Warm-Up & Cool-Down","Aerobic Activity","Strength & Flexibility","Safe Participation","Cooperation & Group Goals","Physical Activity Log"]
   },
   {
-    id:"arts", name:"Visual & Performing Arts", status:"California Grade 3 course area",
+    id:"arts", name:"Visual & Performing Arts", recordSubject:"Fine Arts", status:"California Grade 3 course area",
     summary:"Grade 3 creating, performing or presenting, responding, and connecting through the arts.",
     topics:["Visual Arts","Music","Theatre","Dance","Media Arts","Creating","Performing & Presenting","Responding","Connecting"]
   },
   {
-    id:"health", name:"Health Education", status:"California Grade 3 course area",
+    id:"health", name:"Health Education", recordSubject:"Health", status:"California Grade 3 course area",
     summary:"Age-appropriate health knowledge, safety, relationships, decision-making, nutrition, and well-being.",
     topics:["Growth & Development","Body Parts & Healthy Growth","Friendships, Family & Responsibility","Healthy Social Behavior & Respect","Personal Boundaries & Trusted Adults","Coping with Stress, Loss & Change","Personal & Community Health","Health Decisions, Goals & Helping Others"]
   }
@@ -93,13 +93,14 @@ function renderSubjects(){
     const s=californiaSubjects.find(x=>x.id===btn.dataset.subjectId);
     detail.hidden=false;
     detail.innerHTML=`<p class="eyebrow">${esc(s.status)}</p><h2>${esc(s.name)}</h2><p>${esc(s.summary)}</p>
-      <h3>Topic links</h3><ul class="topic-list">${s.topics.map(t=>`<li><a href="#assignments" class="topic-link" data-topic="${esc(t)}" data-subject="${esc(s.name)}">${esc(t)}</a></li>`).join("")}</ul>
+      <h3>Topic links</h3><ul class="topic-list">${s.topics.map(t=>`<li><a href="#assignments" class="topic-link" data-topic="${esc(t)}" data-subject="${esc(s.recordSubject||s.name)}">${esc(t)}</a></li>`).join("")}</ul>
+      ${s.courseLink?`<div class="actions"><a class="button" href="${esc(s.courseLink)}">${esc(s.courseLabel)}</a></div>`:""}
       <p class="privacy-note">These topic links are the instructional structure. Rory's diagnostics sample Massachusetts exit expectations and California readiness separately.</p>`;
     detail.querySelectorAll(".topic-link").forEach(a=>a.addEventListener("click",e=>{
       e.preventDefault();
       setView("assignments");
       const sf=document.getElementById("subjectFilter");
-      sf.value=[...sf.options].some(o=>o.value===s.name)?s.name:"all";
+      const recordSubject=s.recordSubject||s.name;sf.value=[...sf.options].some(o=>o.value===recordSubject)?recordSubject:"all";
       renderAssignments();
     }));
     detail.scrollIntoView({behavior:"smooth",block:"start"});

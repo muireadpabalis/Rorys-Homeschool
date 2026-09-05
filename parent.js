@@ -1,6 +1,6 @@
 (() => {
  'use strict';
- const cfg=window.PORTAL,prefix=cfg.student.toLowerCase(),reviewKey=prefix+'ParentReview2026',accessKey=prefix+'ParentAccess2026';
+ const cfg=window.PORTAL,prefix=cfg.student.toLowerCase(),reviewKey=prefix+'ParentReview2026',accessKey=prefix+'ParentAccess2026',P=window.AssessmentPersistence;
  const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let reviews={},batteries=[],loaded=false;
  const subjects=['reading','writing','science','history'];
@@ -35,10 +35,10 @@
  }
  async function load(){
   reviews=get(reviewKey)||{};batteries=[];
-  const all=await Promise.all(subjects.map(async subject=>({...(await fetchJSON('assessments/'+subject+'.parent.json')),state:get(prefix+'Baseline2026_'+subject)})));
+  const all=await Promise.all(subjects.map(async subject=>{const definition=await fetchJSON('assessments/'+subject+'.parent.json');let state=null,stateIssue=null;try{state=P?P.read(prefix+'Baseline2026_'+subject):get(prefix+'Baseline2026_'+subject);if(state&&state.version!==definition.version){stateIssue='Saved version '+(state.version||'unknown')+' differs from current version '+definition.version+'. The response record is preserved but is not interpreted.';state=null;}}catch(error){stateIssue='Saved attempt needs recovery. Its original storage was not overwritten.';}return {...definition,state,stateIssue};}));
   batteries=all;
-  const mathState=get(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1');
-  batteries.unshift(mathBattery(await fetchJSON('parent-math.json'),mathState||{}));loaded=true;render();
+  const mathKey=cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1';let mathState=null;try{mathState=P?P.read(mathKey):get(mathKey);}catch(error){mathState=null;}
+  batteries.unshift(mathBattery(await fetchJSON('parent-math.json'),mathState||{}));await Promise.all([window.ScienceParent?.load(),window.HistoryParent?.load()]);loaded=true;render();
  }
  function answer(b,q){
   const a=b.state?.answers?.[q.id];
@@ -82,12 +82,15 @@
  }
  function report(){const gs=groups();return {schemaVersion:1,student:cfg.student,schoolYear:'2026–2027',generatedAt:new Date().toISOString(),scope:'Local, nonstandardized diagnostic evidence. No overall percentage or placement decision.',parentContext:reviews.context||'',method:'Secure evidence requires at least three scored items and at least 80% correct in a subject/domain/band group. Threshold is a planning heuristic, not a validated cut score. E and non-exposure are never automatically remediation. Incorrect answers alone never establish instructional history or a misconception.',assessments:batteries.map(b=>({subject:b.subject,title:b.title,submittedAt:b.state?.submittedAt||null,started:!!b.state?.answers,questionCount:b.questions.length,responses:rowsFor(b),...(b.subject==='reading'?{followUpEvidence:reviews.readingFollowUp||null}:{})})),domains:gs,instructionalBridge:bridge(gs)};}
  function render(){
-  window.ELAParent?.render();
+ window.ELAParent?.render();
+ window.ScienceParent?.render();
+ window.HistoryParent?.render();
   window.ReadingReview.render(reviews,batteries.find(b=>b.subject==='reading'),saveReviews,render);
   const rep=report(),gs=rep.domains;
   $('parent-name').textContent=cfg.student+' — Massachusetts → California Instructional Bridge Report';
   $('context').value=reviews.context||'';$('context-print').textContent=reviews.context||'No parent context recorded.';
-  $('completion').innerHTML=batteries.map(b=>`<li>${esc(b.title)}: ${b.state?.submittedAt||b.state?.submitted?'Submitted':b.state?.answers?'In progress':'Not started'} (${b.questions.length} items)</li>`).join('');
+  $('completion').innerHTML=batteries.map(b=>`<li>${esc(b.title)}: ${b.stateIssue?esc(b.stateIssue):b.state?.submittedAt||b.state?.submitted?'Submitted':b.state?.answers?'In progress':'Not started'} (${b.questions.length} items)</li>`).join('');
+  const recovery=$('assessment-recovery'),legacy=P?.legacySummaries()||[],storageIssues=P?.issues()||[];if(recovery){recovery.hidden=!legacy.length&&!storageIssues.length;recovery.innerHTML='<h2>Assessment recovery archive</h2><p>Earlier portal attempts stay separate from the current batteries because the questions changed. They are preserved and exported without being scored or turned into current responses.</p>'+(legacy.length?'<ul>'+legacy.map(x=>`<li><strong>${esc(x.title)}</strong>: ${x.submittedAt?'submitted '+esc(new Date(x.submittedAt).toLocaleDateString()):'in progress'} · ${x.responseCount} saved response${x.responseCount===1?'':'s'}</li>`).join('')+'</ul>':'<p>No earlier-format attempts were found in this browser profile.</p>')+(storageIssues.length?'<ul>'+storageIssues.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'');}
   const categories=[['Strengths / secure sampled knowledge',g=>/secure|strength\b/i.test(g.status)],['Developing / prior-grade follow-up',g=>['A','B'].includes(g.band)&&g.incorrect>0],['Apparent non-exposure / unknowns',g=>g.unknown||/not taught/.test(g.exposure)],['California transition gaps',g=>g.band==='T'||/transition gap/.test(g.status)],['California readiness',g=>g.band==='C']];
   $('highlights').innerHTML=categories.map(([title,filter])=>`<div class="panel"><h3>${title}</h3>${gs.filter(filter).length?'<ul>'+gs.filter(filter).map(g=>`<li>${esc(g.subject)} / ${esc(g.domain)} (Band ${g.band}): ${esc(g.status)}</li>`).join('')+'</ul>':'<p>No submitted evidence in this category yet.</p>'}</div>`).join('');
   $('domains').innerHTML=gs.length?gs.map(g=>`<section class="panel parent-domain"><span class="badge">${esc(g.subject)} · Band ${g.band} · ${g.priority}</span><h3>${esc(g.domain)}</h3><p><strong>${esc(g.status)}</strong></p><p>Current evidence (including parental confirmation): ${g.correct} correct / confirmed · ${g.incorrect} incorrect · ${g.unknown} unknown · ${g.blank} blank · ${g.rows.length} sampled items</p><p><strong>Action:</strong> ${esc(g.action)}</p>${g.skillsToTeach.length?'<p>Follow-up skills: '+esc(g.skillsToTeach.join('; '))+'</p>':''}<details class="no-print"><summary>Record parent knowledge of prior instruction</summary><label>Exposure<select data-exposure="${esc(g.key)}"><option value="uncertain">Unconfirmed</option><option value="taught">Previously taught</option><option value="not-taught">Not previously taught</option></select></label><label>Evidence / notes<textarea data-notes="${esc(g.key)}">${esc(g.parentNote)}</textarea></label></details><p>Parent evidence: ${esc(g.exposure)}${g.parentNote?' — '+esc(g.parentNote):''}</p><details><summary>Item evidence and standards (${g.rows.length})</summary>${g.rows.map(r=>`<div class="card"><strong>Q${r.questionNumber}: ${esc(r.skill)}</strong><p>${esc(r.question)}</p>${r.passage?`<details><summary>Original passage / stimulus</summary><div class="passage">${esc(r.passage)}</div></details>`:''}<p class="text-response">Response: ${esc(r.responseText||'(no written response)')}</p>${r.parentalReview?`<p><strong>Current parental review:</strong> ${esc(window.ReadingReview.labels[r.parentalReview.classification])} — ${esc(r.parentalReview.interpretation)}</p>`:''}<p>Original classification: ${esc(r.classification)}${r.correctAnswer?' · Key: '+esc(r.correctAnswer):''}</p><p>MA: ${esc(r.maExpectation)}<br>CA: ${esc(r.californiaStandardOrDomain)}</p>${r.legacyAmbiguity?`<p>${esc(r.legacyAmbiguity)}</p>`:''}${r.mappingNote?`<p>${esc(r.mappingNote)}</p>`:''}</div>`).join('')}</details></section>`).join(''):'<p>Submit an assessment to see item-based findings. No results are invented for unstarted work.</p>';
@@ -100,7 +103,14 @@
   const br=rep.instructionalBridge;
   $('bridge').innerHTML=`<h2>Instructional bridge</h2><p>${esc(br.knownHistory)}</p>${br.sequenceProfile.length?'<ol>'+br.sequenceProfile.map(p=>`<li><strong>${esc(p.domain)}</strong>: ${esc(p.status)} — ${esc(p.exposure)}</li>`).join('')+'</ol><p>Last secure sampled stage: '+esc(br.lastSecureSampledStage)+'</p>':''}<p>${esc(br.caution)}</p><h3>Recommended homeschool sequence</h3><ol>${br.recommendedSequence.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol>`;
  }
- function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'))attempts[k]=get(k);}return {...window.ELAParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,diagnosticReport:report()};}
+ function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1')){try{attempts[k]=P&&P.currentKeys.includes(k)?P.read(k):get(k);}catch(error){attempts[k]={recoveryRequired:true};}}}return {...window.ELAParent?.backup(),...window.ScienceParent?.backup(),...window.HistoryParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,assessmentRecovery:P?.exportArchive()||null,diagnosticReport:report()};}
+ function validImportedAttempt(key,value){
+  if(!value||typeof value!=='object'||Array.isArray(value)||value.student&&value.student!==cfg.student)return false;
+  const mathKey=cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1';
+  if(key===mathKey){if(value.itemVersion!==2||!value.answers||typeof value.answers!=='object'||Array.isArray(value.answers))return false;return Object.entries(value.answers).every(([id,answer])=>/^\\d+$/.test(id)&&['A','B','C','D','E'].includes(answer));}
+  const subject=key.slice((prefix+'Baseline2026_').length),definition=batteries.find(b=>b.subject===subject);if(!definition||value.subject!==subject||value.version!==definition.version||!value.answers||typeof value.answers!=='object'||Array.isArray(value.answers))return false;
+  const ids=new Set(definition.questions.map(q=>String(q.id)));return Object.entries(value.answers).every(([id,answer])=>ids.has(String(id))&&answer&&typeof answer==='object'&&!Array.isArray(answer)&&((answer.choice===undefined||Number.isInteger(answer.choice)&&answer.choice>=0&&answer.choice<=4))&&(answer.text===undefined||typeof answer.text==='string'));
+ }
  $('context').onchange=()=>{reviews.context=$('context').value;saveReviews();};
  $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify({...report(),elaWritingBridge:window.ELAParent?.backup()},null,2));
  $('export-all').onclick=()=>download(prefix+'-complete-homeschool-record.json',JSON.stringify(backup(),null,2));
@@ -110,24 +120,36 @@
  $('refresh-parent').onclick=()=>load().catch(e=>alert(e.message));
  $('restore-file').onchange=async e=>{try{
   const file=e.target.files[0];if(!file)return;const imported=JSON.parse(await file.text());
+  if((imported?.state?.assessmentAttempts||imported?.assessmentAttempts)&&(!imported.schemaVersion||imported.schemaVersion<2)){
+   if(imported.student&&imported.student!==cfg.student)throw new Error('Choose an earlier portal backup for '+cfg.student+'.');
+   if(!confirm('Archive these earlier assessment attempts? They will remain historical and will not be converted into the current batteries. A backup will download first.'))return;
+   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));P.importLegacy(imported,'Imported earlier Rory portal backup');await load();alert('Earlier assessment attempts were preserved in the recovery archive. No current answers were created.');return;
+  }
   if(imported.schemaVersion===1&&imported.student===cfg.student&&imported.elaEvidence){
    if(!confirm('Merge this ELA work export? Existing responses take precedence. Missing checkpoints are added. A backup will download first.'))return;
    download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));window.ELAParent.restore(imported);await load();alert('Backup merged. ELA work preserved.');return;
   }
   if(imported.schemaVersion!==2||imported.student!==cfg.student||!imported.record||!['assignments','assessments','logs','portfolio'].every(k=>Array.isArray(imported.record[k])))throw new Error('Choose a complete export for '+cfg.student+'.');
+  window.ScienceParent?.validateImport(imported);
+  window.HistoryParent?.validateImport(imported);
   const validatedReadingReview=imported.parentReview?.readingFollowUp?window.ReadingReview.validate(imported.parentReview.readingFollowUp,batteries.find(b=>b.subject==='reading')):null;
   if(!confirm('Merge '+imported.student+'’s backup ('+imported.record.logs.length+' logs, '+imported.record.portfolio.length+' work samples)? Existing records and attempts take precedence when IDs match. A backup will download first.'))return;
   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));
-  const current=get(cfg.recordKey)||imported.record;
-  for(const k of ['assignments','assessments','logs','portfolio']){const ids=new Set(current[k].map(x=>x.id));for(const item of imported.record[k])if(item.id&&!ids.has(item.id)){current[k].push(item);ids.add(item.id);}}
-  localStorage.setItem(cfg.recordKey,JSON.stringify(current));
   const allowed=[...subjects.map(s=>prefix+'Baseline2026_'+s),cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1'];
-  for(const [k,v] of Object.entries(imported.attempts||{}))if(allowed.includes(k)&&localStorage.getItem(k)===null&&v&&typeof v.answers==='object')localStorage.setItem(k,JSON.stringify(v));
-  window.ELAParent?.restore(imported);
-  if(imported.parentReview?.readingFollowUp){const incoming=validatedReadingReview;const currentReviews=get(reviewKey)||{};if(!currentReviews.readingFollowUp){currentReviews.readingFollowUp=incoming;localStorage.setItem(reviewKey,JSON.stringify({...imported.parentReview,...currentReviews}));}}
-  if(!localStorage.getItem(reviewKey)&&imported.parentReview)localStorage.setItem(reviewKey,JSON.stringify(imported.parentReview));await load();alert('Backup merged. Existing records and attempts were preserved.');
+  for(const [k,v] of Object.entries(imported.attempts||{}))if(allowed.includes(k)&&v&&typeof v==='object'&&!validImportedAttempt(k,v))throw new Error('The backup contains an unsupported attempt for '+k+'. It was not installed.');
+  const before={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.toLowerCase().startsWith(prefix))before[k]=localStorage.getItem(k);}
+  const rollback=()=>{for(let i=localStorage.length-1;i>=0;i--){const k=localStorage.key(i);if(k&&k.toLowerCase().startsWith(prefix)&&!(k in before))localStorage.removeItem(k);}for(const [k,v] of Object.entries(before)){try{localStorage.setItem(k,v);}catch(ignored){}}};
+  try{
+   const current=get(cfg.recordKey)||imported.record;
+   for(const k of ['assignments','assessments','logs','portfolio']){const ids=new Set(current[k].map(x=>x.id));for(const item of imported.record[k])if(item.id&&!ids.has(item.id)){current[k].push(item);ids.add(item.id);}}
+   localStorage.setItem(cfg.recordKey,JSON.stringify(current));
+   for(const [k,v] of Object.entries(imported.attempts||{}))if(allowed.includes(k)&&(P?P.inspect(k).value===null:localStorage.getItem(k)===null)&&v&&typeof v.answers==='object'){if(P&&P.currentKeys.includes(k))P.write(k,v);else localStorage.setItem(k,JSON.stringify(v));}
+   window.ELAParent?.restore(imported);window.ScienceParent?.restore(imported);window.HistoryParent?.restore(imported);
+   if(imported.parentReview?.readingFollowUp){const incoming=validatedReadingReview;const currentReviews=get(reviewKey)||{};if(!currentReviews.readingFollowUp){currentReviews.readingFollowUp=incoming;localStorage.setItem(reviewKey,JSON.stringify({...imported.parentReview,...currentReviews}));}}
+   if(!localStorage.getItem(reviewKey)&&imported.parentReview)localStorage.setItem(reviewKey,JSON.stringify(imported.parentReview));if(imported.assessmentRecovery)P?.mergeRecovery(imported.assessmentRecovery);await load();alert('Backup merged. Existing records and attempts were preserved.');
+  }catch(error){rollback();throw error;}
  }catch(error){alert('Restore needs attention: '+error.message);}finally{e.target.value='';}};
- window.addEventListener('beforeprint',()=>{if(loaded){render();document.querySelectorAll('#ela-parent details').forEach(d=>d.open=true);}});
+ window.addEventListener('beforeprint',()=>{if(loaded){render();document.querySelectorAll('#ela-parent details,#science-parent details,#history-parent details').forEach(d=>d.open=true);}});
  window.addEventListener('afterprint',()=>{if(loaded)render();});
  gate();
 })();

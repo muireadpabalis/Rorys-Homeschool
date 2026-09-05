@@ -12,10 +12,10 @@
  const original=renderAssignments;
  renderAssignments=function(){
   original();
+  banner.hidden=subjectFilter.value!=='all'&&subjectFilter.value!=='English Language Arts';
   const cards=[...assignmentList.children];
-  const filtered=data.assignments.filter(a=>(subjectFilter.value==='all'||a.subject===subjectFilter.value)&&(statusFilter.value==='all'||(statusFilter.value==='complete'&&a.complete)||(statusFilter.value==='open'&&!a.complete)));
-  cards.forEach((card,i)=>{const task=filtered[i];if(!task)return;const a=C.assignments.find(x=>x.id===task.id);
-   if(select.value!=='all'&&a?.week!==Number(select.value)){card.remove();return;}
+  cards.forEach(card=>{const task=data.assignments.find(x=>x.id===card.dataset.assignmentId);if(!task)return;const a=C.assignments.find(x=>x.id===task.id);
+   if(select.value!=='all'&&subjectFilter.value==='English Language Arts'&&a?.week!==Number(select.value)){card.remove();return;}
    if(!a)return;
    card.dataset.elaId=a.id;
    const meta=document.createElement('p');meta.className='meta ela-record-meta';meta.textContent=`Week ${a.week}.${a.sequence} · ${a.effort} · ${a.kind} · CA ${a.standards.join(', ')}`;card.querySelector('h3').after(meta);
@@ -25,7 +25,7 @@
   });
   if(!assignmentList.children.length)assignmentList.innerHTML='<p class="empty">No assignments match these filters.</p>';
  };
- select.onchange=renderAssignments;subjectFilter.onchange=renderAssignments;statusFilter.onchange=renderAssignments;
+ select.onchange=()=>{if(select.value!=='all'){subjectFilter.value='English Language Arts';const science=document.getElementById('scienceWeekFilter');if(science)science.value='all';const history=document.getElementById('historyWeekFilter');if(history)history.value='all';}renderAssignments();};subjectFilter.onchange=renderAssignments;statusFilter.onchange=renderAssignments;
  const banner=document.createElement('div');banner.className='panel ela-assignment-banner';banner.innerHTML='<h3>ELA · My seven-week writing workshop</h3><p>Choose a week. Start with the first unfinished activity. Short tasks are small practice steps; standard tasks can use a longer session. Take breaks when you need them. Your work saves as you go.</p>';
  document.querySelector('#assignments .filter-row').before(banner);
  // Complete exports include private parent material and therefore use the existing parent gate.
