@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "courseVersion": "2026.1",
+  "title": "Community Explorer: Maps, Evidence & Place — Parent Plan",
+  "baseline": {
+    "interpretation": "The completed History–Social Science Baseline remains Rory’s starting record. This seven-week course provides Grade 3 instruction and gathers new work evidence through maps, timelines, source analysis, civic problem solving, and a culminating community case.",
+    "strengths": [
+      "Sampled knowledge of basic economics, including goods, services, resources, and trade",
+      "Useful prior ideas about communities and evidence that can be extended in Grade 3 work"
+    ],
+    "reinforceThroughUse": [
+      "Map scale and locating California and the Pacific Ocean",
+      "Chronological sequencing and placing an event between dated events",
+      "Comparing sources or accounts that disagree",
+      "Recognizing traditions passed between generations",
+      "Matching shared public needs to local government services"
+    ],
+    "newGrade3Instruction": [
+      "The role of legislatures and constructive civic participation",
+      "Distinct Indigenous peoples, continuing communities, and careful source attribution",
+      "Local geography and history inquiry using maps, photographs, records, and other sources",
+      "Applying economics to geography, resources, and community interdependence"
+    ],
+    "preservation": "Course code never writes to roryBaseline2026_history. Do not convert the baseline into a course grade or recreate missing answers."
+  },
+  "assistanceOptions": [
+    "Independent",
+    "Parent read directions only",
+    "Brief reminder or question",
+    "Parent scribed Rory’s words",
+    "Guided instruction or modeling",
+    "Step-by-step support"
+  ],
+  "reviewStatuses": [
+    "Not reviewed",
+    "Observed independently",
+    "Completed with brief support",
+    "Completed with guided instruction",
+    "Continue instruction",
+    "Insufficient evidence"
+  ],
+  "weeks": [
+    {
+      "number": 1,
+      "parentRole": "Prepare simple map markers and an optional U.S. outline map. Ask Rory to point to the key or scale when he explains an answer.",
+      "lookFor": ["Uses a key and cardinal directions", "Treats one map space as two blocks consistently", "Locates California west of Massachusetts and names the Pacific Ocean"],
+      "exitIntent": ["Fresh observation of map-scale reasoning", "Fresh observation of California/Pacific location", "Evidence language tied to a map feature"]
+    },
+    {
+      "number": 2,
+      "parentRole": "Prepare dated cards and let Rory move them. Read the fictional source cards aloud without telling him which claim to choose.",
+      "lookFor": ["Uses dates instead of guessing order", "Separates a source fact from an inference", "Checks a disputed memory against relevant dated evidence"],
+      "exitIntent": ["Fresh observation of chronology", "Fresh observation of source comparison", "A claim that names its supporting source"]
+    },
+    {
+      "number": 3,
+      "parentRole": "Offer fictional or public examples so Rory never has to disclose private family or migration history.",
+      "lookFor": ["Explains that a tradition is meaningful and passed on", "Distinguishes migration from short travel", "Names culture that can move without being packed"],
+      "exitIntent": ["Fresh observation of tradition recognition", "Reasoning from scenario words", "Respectful, nonprivate examples"]
+    },
+    {
+      "number": 4,
+      "parentRole": "Guide the mock vote and explain that actual lawmaking has more steps. Use the official government links for adult background.",
+      "lookFor": ["Matches a public need to a relevant service", "Uses measured data in a civic proposal", "States that a legislature discusses and votes on proposed laws"],
+      "exitIntent": ["Fresh observation of service matching", "New Grade 3 civic instruction", "Constructive participation supported by evidence"]
+    },
+    {
+      "number": 5,
+      "parentRole": "Lead the source lab. Use a tribe-authored or other reliable official source; verify spelling, attribution, present-day language, and the exact claim Rory records.",
+      "lookFor": ["Understands that Indigenous peoples are distinct and present today", "Does not infer a specific cultural practice from geography alone", "Names the source for every specific community claim"],
+      "exitIntent": ["New Grade 3 instruction, not remediation", "Evidence of continuity into the present", "No invented ceremony, belief, quotation, vocabulary, or homeland boundary"]
+    },
+    {
+      "number": 6,
+      "parentRole": "Set up resource and trade cards. Ask what the fictional maps actually show before Rory proposes a job or adaptation.",
+      "lookFor": ["Builds a resource → job → good/service chain", "Explains how trade can benefit both communities", "Uses may/could when a map supports a possibility rather than a fact"],
+      "exitIntent": ["Extension of demonstrated economics strength", "Applied geography reasoning", "Evidence separated from assumption"]
+    },
+    {
+      "number": 7,
+      "parentRole": "Provide two verified dated sources and listen to Rory’s three-to-five-minute case presentation. Prompt only as needed and record the actual help used.",
+      "lookFor": ["Uses map, timeline, and source clues together", "Separates observation from inference", "Explains one idea that changed after checking evidence", "Cites any specific Indigenous community fact"],
+      "exitIntent": ["Culminating evidence rather than a placement score", "One skill shown independently", "One skill shown with support", "One skill to observe again during regular Grade 3 instruction"]
+    }
+  ]
+}

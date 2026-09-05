@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "courseVersion": "2026.1",
+  "student": "Rory",
+  "title": "Parent Plan — Seven-Week Grade 3 Science Bridge",
+  "baseline": {
+    "preservation": "The completed Science Baseline remains a separate, locked assessment under its existing storage key. Course work must never replace, rescore, or reopen it.",
+    "strengths": [
+      "Substantial sampled prior-grade Life Science strength",
+      "Substantial sampled prior-grade Earth Science strength",
+      "Several scientific-reasoning and physical-science concepts",
+      "Grade 3 readiness shown with magnetic forces acting without contact",
+      "Grade 3 readiness shown by comparing weather records",
+      "Grade 3 readiness shown by using fossils as evidence about past life",
+      "Grade 3 readiness shown by selecting an engineering solution to reduce flood damage"
+    ],
+    "reinforceThroughUse": [
+      "Direct observation versus inference, judgment, prediction, or opinion",
+      "Push versus pull",
+      "Flexible versus rigid and other observable material properties",
+      "Reading simple experimental data",
+      "Reversible versus irreversible changes",
+      "Using experimental results as evidence",
+      "Identifying evidence that actually supports a claim",
+      "Separating measured or observed data from expectations or opinions",
+      "Comparing engineering solutions from test results",
+      "Understanding the purpose and limits of models and plans"
+    ],
+    "newGrade3Instruction": [
+      "Life cycles",
+      "Inherited traits versus learned or acquired characteristics",
+      "Environmental effects on growth and survival",
+      "Balanced and unbalanced forces",
+      "Deeper investigation of magnetic forces acting without contact"
+    ],
+    "interpretation": "This is an instructional bridge. Do not assign broad remediation in areas where Rory already demonstrated strength. Ask what he observed or measured before accepting an explanation. When results differ from a prediction, praise accurate reporting and help him revise the claim."
+  },
+  "assistanceOptions": [
+    "Independent",
+    "Parent read directions only",
+    "Brief reminder or question",
+    "Parent scribed Rory’s words",
+    "Guided investigation or modeling",
+    "Step-by-step support"
+  ],
+  "reviewStatuses": [
+    "Not reviewed",
+    "Evidence recorded — ready to apply",
+    "Review together in a fresh task",
+    "Continue direct instruction",
+    "Insufficient evidence yet"
+  ],
+  "weeks": [
+    {
+      "number": 1,
+      "title": "Thinking Like a Scientist",
+      "parentRole": "Release equal papers from the same height and protect fair-test conditions. Ask, ‘What did you actually see or count?’",
+      "lookFor": ["Observation language describes visible or measured events", "Evidence comes from the four recorded trials", "The claim changes if the results differ from the prediction"],
+      "exitIntent": ["Direct observation is ‘The leaf is green.’", "Relevant evidence is the recorded trial count", "A prediction comes before the test and is not measured test data"]
+    },
+    {
+      "number": 2,
+      "title": "Materials and Changes",
+      "parentRole": "Prepare equal-size samples and equal water amounts. Handle refreezing and spills.",
+      "lookFor": ["Flexible and rigid are based on bending observations", "Material choice cites water-test results", "Melting/refreezing is reversible; torn paper cannot return to one unbroken sheet through the tested actions"],
+      "exitIntent": ["Flexible means bends easily", "The result with zero drops passing through best resists water", "The refrozen water observation supports reversibility"]
+    },
+    {
+      "number": 3,
+      "title": "Forces and Motion",
+      "parentRole": "Partner in opposite pulls and supervise magnets and small parts. Keep car release position constant.",
+      "lookFor": ["Pulling a wagon handle is identified as a pull", "No motion change with equal opposite pulls supports balanced forces", "The paper-layer gap is cited as evidence for no-contact magnetic force"],
+      "exitIntent": ["Wagon handle toward the person is a pull", "Equal opposite forces with no change in motion are balanced", "Movement across a visible gap is the relevant magnetic evidence"]
+    },
+    {
+      "number": 4,
+      "title": "Life Cycles",
+      "parentRole": "Help prepare seeds and the rotating model. Let Rory place stages and explain arrows.",
+      "lookFor": ["Butterfly order is egg, caterpillar, pupa, adult", "Models are circular and include offspring or new seeds", "Rory explains both a shared pattern and a difference"],
+      "exitIntent": ["Egg → caterpillar → pupa → adult", "Arrows show sequence and continuation", "Organisms begin life, grow, reproduce, and eventually die while offspring continue the cycle"]
+    },
+    {
+      "number": 5,
+      "title": "Traits",
+      "parentRole": "Set safe watering amounts and help keep other conditions steady. Record scribing or guidance honestly.",
+      "lookFor": ["Natural fur color is likely inherited", "A trained trick is learned", "The growth claim stays cautious and cites measurements even when results are unclear"],
+      "exitIntent": ["Natural fur color is inherited", "A trained trick is learned", "The answer must use Rory’s actual measurements rather than an expected result"]
+    },
+    {
+      "number": 6,
+      "title": "Earth Science Through Evidence",
+      "parentRole": "Join outdoor observations and help Rory distinguish a short weather record from long-term climate data.",
+      "lookFor": ["A weather claim cites supplied values", "A prediction is labeled separately", "Fossil conclusions include both a supported idea and an evidence limit"],
+      "exitIntent": ["Conditions today are weather", "A fossil leaf supports that a plant lived long ago", "Relevant evidence names exact seasonal values"]
+    },
+    {
+      "number": 7,
+      "title": "Engineering Design",
+      "parentRole": "Control equal water pours, supervise cutting and spills, and require the same test conditions for both designs.",
+      "lookFor": ["Criteria and constraints are named before building", "A plan is treated as an idea, not proof", "Design B responds to a recorded failure point", "The final choice cites at least two test results"],
+      "exitIntent": ["A plan must be tested", "Criteria describe success and constraints describe limits", "The stronger solution is selected from test data rather than appearance or preference"]
+    }
+  ]
+}
