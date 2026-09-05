@@ -56,5 +56,3 @@
  }
  window.HistoryStore={C,prefix,parentKey,recordKey,weeks,commonFields,allFields,fieldIds,checkIds,read,write,esc,blank,validateWork,work,save,evidence,parent,download,backup,restorePlan,restore,syncPortal};
 })();
-
-\n

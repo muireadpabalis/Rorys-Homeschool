@@ -27,5 +27,3 @@
  function restore(imported){if(imported?.historyBridge){S.restore(imported.historyBridge);S.syncPortal();}}
  window.HistoryParent={load,unavailable,render,summary,backup,validateImport,restore};
 })();
-
-\n

@@ -47,7 +47,3 @@
  window.addEventListener('storage',event=>{if(active&&event.key===S.prefix+active.id){externalConflict=true;status('This week changed in another tab. Download this copy and reload before adding more work.');document.querySelectorAll('input,select,textarea,button').forEach(el=>{if(el.id!=='history-export')el.disabled=true;});}});
  try{params.get('id')?lesson():overview();}catch(error){fail(error);}
 })();
-
-
-
-\n

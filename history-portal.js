@@ -21,5 +21,3 @@
   renderAll();if(location.hash==='#history'){setView('assignments');subjectFilter.value='History–Social Science';renderAssignments();}
  }catch(error){const message=document.createElement('p');message.className='history-alert';message.setAttribute('role','alert');message.textContent='History course needs attention: '+error.message;document.getElementById('assignments').prepend(message);}
 })();
-
-\n
