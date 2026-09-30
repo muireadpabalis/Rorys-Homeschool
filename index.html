@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rory's Home School</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="ela.css">
 <link rel="stylesheet" href="science.css">
 <link rel="stylesheet" href="history.css">
+<link rel="stylesheet" href="instruction.css?v=20260909a">
 </head>
 <body>
 <header class="site-header">
@@ -92,10 +94,10 @@
 </section>
 
 <section id="assessments" class="view">
-  <div class="section-heading"><div><p class="eyebrow">Massachusetts Exit Baseline + Later Progress Checks</p><h2>Assessments</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">Historical Starting Evidence</p><h2>Completed Baselines & Records</h2></div></div>
   <div class="assessment-intro panel">
-    <h3>Assessment Week</h3>
-    <p>Rory's initial assessments use Massachusetts exit expectations as the core baseline, with separate prerequisite and California readiness probes, to establish where Grade 2 instruction left off. After the baseline is complete, instructional work and progress checks will be organized around California Grade 3 expectations.</p>
+    <h3>Assessment phase complete</h3>
+    <p>Rory’s completed diagnostics remain here as locked historical starting evidence. Current work is organized in the seven-week California Grade 3 instructional courses, assignments, portfolio, and progress records.</p>
   </div>
   <div id="assessmentList" class="card-list"></div>
 </section>
@@ -136,7 +138,7 @@
         <button id="exportJsonBtn" class="button">Export Full Record (.json)</button>
         <button id="exportCsvBtn" class="button secondary">Export Learning Log (.csv)</button>
       </div>
-      <p class="privacy-note"><strong>Important:</strong> this starter version stores progress only in this browser. Export regularly so the record is backed up.</p>
+      <p class="privacy-note"><strong>Backup option:</strong> GitHub work history is managed in the card below. A downloaded export remains useful as an extra family copy.</p>
     </article>
   </div>
 </section>
@@ -173,17 +175,22 @@
 </dialog>
 
 <script src="portal-config.js"></script>
-<script src="assessment-persistence.js"></script>
-<script src="app.js?v=20260905"></script>
-<script src="portal-extras.js?v=20260905"></script>
+<script src="storage-resilience.js?v=20260909a"></script>
+<script src="github-sync.js?v=20260915a"></script>
+<script src="assessment-persistence.js?v=20260909a"></script>
+<script src="app.js?v=20260909a"></script>
+<script src="portal-extras.js?v=20260909a"></script>
 <script src="ela-curriculum.js"></script>
 <script src="ela-store.js"></script>
 <script src="ela-portal.js?v=20260905"></script>
 <script src="science-course.js?v=20260905"></script>
 <script src="science-store.js?v=20260905"></script>
-<script src="science-portal.js?v=20260905"></script>
+<script src="science-portal.js?v=20260909a"></script>
 <script src="history-course.js?v=20260905"></script>
 <script src="history-store.js?v=20260905"></script>
 <script src="history-portal.js?v=20260905"></script>
+<script src="math-course.js?v=20260909a"></script>
+<script src="instruction-core.js?v=20260909a"></script>
+<script src="instruction-portal.js?v=20260909a"></script>
 </body>
 </html>

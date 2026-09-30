@@ -1,15 +1,16 @@
-/* Non-destructive assessment persistence and recovery for Rory's portal. */
+/* Non-destructive assessment persistence and recovery for this homeschool portal. */
 (() => {
  'use strict';
  const cfg=window.PORTAL||{student:'Rory'},prefix=cfg.student.toLowerCase();
  const recoveryKey=prefix+'AssessmentRecovery2026V1';
  const legacyKey=prefix==='rory'?'roryHomeschoolCompleteV2':prefix+'HomeschoolCompleteV2';
  const currentKeys=[...['reading','writing','science','history'].map(s=>prefix+'Baseline2026_'+s),prefix==='rory'?'rory_math_baseline_v1':prefix+'MathDiagnosticV1'];
- const currentSet=new Set(currentKeys),issues=[];
+ const currentSet=new Set(currentKeys),issues=[],MAX_CURRENT_HISTORY=12;
  const legacyLabels={math:'Math Baseline',reading:'Reading Baseline',language:'Language & Grammar Baseline',science:'Science Baseline',social:'Social Studies Baseline',studytech:'Study Skills & Technology',writing:'Writing Baseline',oral:'Speaking & Listening Check'};
  const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
  const clone=v=>structuredClone(v);
  const empty=()=>({schemaVersion:1,student:cfg.student,updatedAt:null,currentAttempts:{},currentHistory:{},importedCurrent:{},legacyContainers:{},legacyImports:{},malformed:{}});
+ const validVault=v=>object(v)&&v.schemaVersion===1&&v.student===cfg.student&&object(v.currentAttempts)&&object(v.legacyContainers)&&object(v.legacyImports)&&object(v.malformed);
  const parseObject=raw=>{const value=JSON.parse(raw);if(!object(value))throw Error('not an object');return value;};
  const count=v=>object(v?.answers)?Object.keys(v.answers).length:object(v?.responses)?Object.keys(v.responses).length:0;
  const hash=text=>{let h=2166136261;for(let i=0;i<text.length;i++){h^=text.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0).toString(16).padStart(8,'0')+'-'+text.length;};
@@ -17,12 +18,24 @@
 
  try{
   const raw=localStorage.getItem(recoveryKey);
-  if(raw!==null){const parsed=JSON.parse(raw);if(!object(parsed)||parsed.schemaVersion!==1||parsed.student!==cfg.student||!object(parsed.currentAttempts)||!object(parsed.legacyContainers)||!object(parsed.legacyImports)||!object(parsed.malformed))throw Error('unsupported recovery format');vault={...empty(),...parsed,currentHistory:object(parsed.currentHistory)?parsed.currentHistory:{},importedCurrent:object(parsed.importedCurrent)?parsed.importedCurrent:{}};}
+  if(raw!==null){const parsed=JSON.parse(raw);if(!validVault(parsed))throw Error('unsupported recovery format');vault={...empty(),...parsed,currentHistory:object(parsed.currentHistory)?parsed.currentHistory:{},importedCurrent:object(parsed.importedCurrent)?parsed.importedCurrent:{}};}
  }catch(error){corruptRecoveryRaw=localStorage.getItem(recoveryKey);vaultWritable=false;issues.push('The assessment recovery archive needs parent attention. Current assessment keys were left untouched.');}
 
+ function attemptRank(entry){const value=entry?.value||{};return [submitted(value)?1:0,Number(value._revision||0),Date.parse(value.updatedAt||entry?.capturedAt||value.submittedAt||value.startedAt||0)||0];}
+ function chooseAttempt(a,b){if(!object(a))return object(b)?clone(b):null;if(!object(b))return clone(a);const ar=attemptRank(a),br=attemptRank(b);for(let i=0;i<ar.length;i++){if(ar[i]!==br[i])return clone(ar[i]>br[i]?a:b);}return clone(b);}
+ function mergeNested(a,b){const result={};for(const key of new Set([...Object.keys(object(a)?a:{}),...Object.keys(object(b)?b:{})]))result[key]={...(object(a?.[key])?a[key]:{}),...(object(b?.[key])?b[key]:{})};return result;}
+ function mergeVaults(disk,local){
+  const merged={...empty(),...disk,...local};
+  merged.currentAttempts={};for(const key of new Set([...Object.keys(disk.currentAttempts||{}),...Object.keys(local.currentAttempts||{})])){const selected=chooseAttempt(disk.currentAttempts?.[key],local.currentAttempts?.[key]);if(selected)merged.currentAttempts[key]=selected;}
+  merged.currentHistory=mergeNested(disk.currentHistory,local.currentHistory);merged.importedCurrent=mergeNested(disk.importedCurrent,local.importedCurrent);
+  merged.legacyContainers={...(disk.legacyContainers||{}),...(local.legacyContainers||{})};merged.legacyImports={...(disk.legacyImports||{}),...(local.legacyImports||{})};merged.malformed=mergeNested(disk.malformed,local.malformed);
+  return merged;
+ }
+ function trimHistory(key){const list=vault.currentHistory?.[key];if(!object(list))return false;const entries=Object.entries(list);if(entries.length<=MAX_CURRENT_HISTORY)return false;entries.sort(([,a],[,b])=>(Date.parse(a?.capturedAt||0)||0)-(Date.parse(b?.capturedAt||0)||0));for(const [id] of entries.slice(0,entries.length-MAX_CURRENT_HISTORY))delete list[id];return true;}
+ function trimAllHistory(){let changed=false;for(const key of Object.keys(vault.currentHistory||{}))changed=trimHistory(key)||changed;return changed;}
  function saveVault(){
   if(!vaultWritable)return false;
-  try{vault.updatedAt=new Date().toISOString();const raw=JSON.stringify(vault);localStorage.setItem(recoveryKey,raw);if(localStorage.getItem(recoveryKey)!==raw)throw Error('verification failed');return true;}
+  try{const diskRaw=localStorage.getItem(recoveryKey);if(diskRaw!==null){const disk=JSON.parse(diskRaw);if(!validVault(disk))throw Error('unsupported recovery format');vault=mergeVaults({...empty(),...disk},vault);}trimAllHistory();vault.updatedAt=new Date().toISOString();const raw=JSON.stringify(vault);localStorage.setItem(recoveryKey,raw);if(localStorage.getItem(recoveryKey)!==raw)throw Error('verification failed');return true;}
   catch(error){vaultWritable=false;issues.push('A recovery copy could not be saved. Export the complete record from the parent area.');return false;}
  }
  function addRaw(group,key,raw,source){
@@ -40,7 +53,7 @@
  }
  function captureCurrent(key,value,source='Current assessment key'){
   if(!currentSet.has(key)||!object(value)||!vaultWritable)return false;
-  const raw=JSON.stringify(value),changed=addRaw('currentHistory',key,raw,source);
+  const raw=JSON.stringify(value),changed=addRaw('currentHistory',key,raw,source);trimHistory(key);
   vault.currentAttempts[key]={value:clone(value),capturedAt:new Date().toISOString(),source};return changed||true;
  }
  function readPrimary(key){
@@ -111,7 +124,7 @@
   return rows.sort((a,b)=>String(a.title).localeCompare(String(b.title)));
  }
  function validateRecovery(source){
-  if(!object(source)||source.schemaVersion!==1||source.student!==cfg.student)throw Error('Unsupported assessment recovery archive.');
+  if(!validVault(source))throw Error('Unsupported assessment recovery archive.');
   for(const group of ['currentAttempts','legacyContainers','legacyImports','malformed'])if(!object(source[group]||{}))throw Error('Assessment recovery archive is incomplete.');
  }
  function addImportedCandidate(key,value,source){
@@ -141,6 +154,8 @@
  function exportArchive(){return {recovery:clone(vault),legacyPortalRaw:localStorage.getItem(legacyKey),corruptRecoveryRaw};}
  function status(){return {...lastStatus};}
 
+ if(trimAllHistory())saveVault();
+ if(typeof window.addEventListener==='function')window.addEventListener('storage',event=>{if(event.key!==recoveryKey||typeof event.newValue!=='string')return;try{const incoming=JSON.parse(event.newValue);if(validVault(incoming))vault=mergeVaults(incoming,vault);}catch(error){issues.push('A newer recovery archive could not be read. This tab will not overwrite it.');vaultWritable=false;}});
  const legacyRaw=localStorage.getItem(legacyKey);if(legacyRaw!==null)captureLegacyRaw(legacyRaw);
  for(const key of currentKeys){const primary=readPrimary(key);if(primary.value){captureCurrent(key,primary.value);saveVault();}}
  window.AssessmentPersistence={recoveryKey,legacyKey,currentKeys,read,write,inspect,importLegacy,mergeRecovery,archiveImportedAttempt,legacySummaries,exportArchive,status,issues:()=>[...new Set(issues)]};

@@ -16,3 +16,30 @@ main{padding:30px clamp(20px,5vw,72px) 80px;max-width:1500px;margin:auto}.view{d
 .standards-note{border-left:5px solid var(--accent)}
 @media(max-width:900px){.subject-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.subject-grid{grid-template-columns:1fr}.topic-list{grid-template-columns:1fr}}
+
+/* Shared GitHub work history */
+.github-sync-strip,.github-sync-page-status{display:flex;align-items:center;gap:10px;border:1px solid #b9d2d0;background:#f2f8f7;border-radius:14px;padding:12px 16px;margin:14px 0;color:var(--text)}
+.github-sync-strip p,.github-sync-page-status p{margin:0;flex:1}
+.github-sync-page-status{max-width:1100px;margin:0 auto 20px}
+.github-sync-dot{width:11px;height:11px;border-radius:999px;background:#7b8794;box-shadow:0 0 0 4px rgba(123,135,148,.14);flex:0 0 auto}
+.github-sync-strip:has([data-state="saved"]) .github-sync-dot,.github-sync-page-status:has([data-state="saved"]) .github-sync-dot{background:var(--success);box-shadow:0 0 0 4px rgba(47,122,77,.14)}
+.github-sync-strip:has([data-state="working"]) .github-sync-dot,.github-sync-page-status:has([data-state="working"]) .github-sync-dot{background:#aa6b10;box-shadow:0 0 0 4px rgba(170,107,16,.14)}
+.github-sync-strip:has([data-state="needs-attention"]) .github-sync-dot,.github-sync-page-status:has([data-state="needs-attention"]) .github-sync-dot{background:#b42318;box-shadow:0 0 0 4px rgba(180,35,24,.14)}
+.github-sync-card{border-top:5px solid var(--accent)}
+.github-sync-callout{border-radius:10px;padding:12px;background:#f3f5f7;border:1px solid var(--line)}
+.github-sync-callout[data-state="saved"]{background:#edf8f1;border-color:#abd5ba;color:#245f3d}
+.github-sync-callout[data-state="working"]{background:#fff7e8;border-color:#e9c982;color:#714b0b}
+.github-sync-callout[data-state="needs-attention"]{background:#fff0ef;border-color:#e5aaa5;color:#8d2119}
+.github-sync-connected{font-weight:700;color:var(--muted)}
+.github-sync-remember{display:flex;align-items:center;gap:8px;font-weight:700;margin:4px 0 10px}.github-sync-remember input{width:auto}
+.github-sync-token-row{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin:14px 0}
+.github-sync-token-row label{display:grid;gap:6px;font-weight:700}
+.github-sync-token-row input{width:100%;border:1px solid #c9d0d9;border-radius:9px;padding:11px;font:inherit;background:#fff;color:var(--text)}
+.github-sync-actions{align-items:center;flex-wrap:wrap}
+.github-sync-conflict{margin-top:16px;padding:14px;border:2px solid #d39b96;border-radius:12px;background:#fff5f4}
+.github-sync-conflict p{margin-bottom:10px}
+.github-sync-card details{margin-top:18px}
+.github-sync-card summary{cursor:pointer;font-weight:750;color:var(--accent)}
+.github-sync-card li+li{margin-top:6px}
+@media(max-width:680px){.github-sync-token-row{grid-template-columns:1fr}.github-sync-strip,.github-sync-page-status{align-items:flex-start;flex-wrap:wrap}.github-sync-strip .link-button,.github-sync-page-status a{margin-left:21px}}
+@media print{.github-sync-strip,.github-sync-page-status,.github-sync-card{display:none!important}}

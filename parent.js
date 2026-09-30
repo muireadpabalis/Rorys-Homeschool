@@ -2,10 +2,10 @@
  'use strict';
  const cfg=window.PORTAL,prefix=cfg.student.toLowerCase(),reviewKey=prefix+'ParentReview2026',accessKey=prefix+'ParentAccess2026',P=window.AssessmentPersistence;
  const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- let reviews={},batteries=[],loaded=false;
+ let reviews={},batteries=[],loaded=false,reviewConflict=false;
  const subjects=['reading','writing','science','history'];
  const get=k=>JSON.parse(localStorage.getItem(k)||'null');
- function saveReviews(){try{localStorage.setItem(reviewKey,JSON.stringify(reviews));return true}catch(e){alert('Parent notes were not saved. Export now and free browser storage.');return false;}}
+ function saveReviews(){if(reviewConflict){alert('Parent notes changed in another tab. Refresh parent records before saving this field.');return false;}try{localStorage.setItem(reviewKey,JSON.stringify(reviews));return true}catch(e){alert('Parent notes were not saved. Export now and free browser storage.');return false;}}
  const download=(name,content,type='application/json')=>{const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
  async function digest(s){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(x=>x.toString(16).padStart(2,'0')).join('');}
  function gate(){
@@ -34,7 +34,7 @@
   })};
  }
  async function load(){
-  reviews=get(reviewKey)||{};batteries=[];
+  reviews=get(reviewKey)||{};reviewConflict=false;batteries=[];
   const all=await Promise.all(subjects.map(async subject=>{const definition=await fetchJSON('assessments/'+subject+'.parent.json');let state=null,stateIssue=null;try{state=P?P.read(prefix+'Baseline2026_'+subject):get(prefix+'Baseline2026_'+subject);if(state&&state.version!==definition.version){stateIssue='Saved version '+(state.version||'unknown')+' differs from current version '+definition.version+'. The response record is preserved but is not interpreted.';state=null;}}catch(error){stateIssue='Saved attempt needs recovery. Its original storage was not overwritten.';}return {...definition,state,stateIssue};}));
   batteries=all;
   const mathKey=cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1';let mathState=null;try{mathState=P?P.read(mathKey):get(mathKey);}catch(error){mathState=null;}
@@ -85,6 +85,7 @@
  window.ELAParent?.render();
  window.ScienceParent?.render();
  window.HistoryParent?.render();
+  window.InstructionParent?.renderAll();
   window.ReadingReview.render(reviews,batteries.find(b=>b.subject==='reading'),saveReviews,render);
   const rep=report(),gs=rep.domains;
   $('parent-name').textContent=cfg.student+' — Massachusetts → California Instructional Bridge Report';
@@ -103,16 +104,27 @@
   const br=rep.instructionalBridge;
   $('bridge').innerHTML=`<h2>Instructional bridge</h2><p>${esc(br.knownHistory)}</p>${br.sequenceProfile.length?'<ol>'+br.sequenceProfile.map(p=>`<li><strong>${esc(p.domain)}</strong>: ${esc(p.status)} — ${esc(p.exposure)}</li>`).join('')+'</ol><p>Last secure sampled stage: '+esc(br.lastSecureSampledStage)+'</p>':''}<p>${esc(br.caution)}</p><h3>Recommended homeschool sequence</h3><ol>${br.recommendedSequence.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol>`;
  }
- function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1')){try{attempts[k]=P&&P.currentKeys.includes(k)?P.read(k):get(k);}catch(error){attempts[k]={recoveryRequired:true};}}}return {...window.ELAParent?.backup(),...window.ScienceParent?.backup(),...window.HistoryParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),record:get(cfg.recordKey),attempts,parentReview:reviews,assessmentRecovery:P?.exportArchive()||null,diagnosticReport:report()};}
+ function recordBackup(){const raw=localStorage.getItem(cfg.recordKey);if(raw===null)return {record:null};try{const value=JSON.parse(raw);if(!value||!['assignments','assessments','logs','portfolio'].every(k=>Array.isArray(value[k])))throw Error('unsupported school record');return {record:value};}catch(error){return {record:null,recordRecovery:{key:cfg.recordKey,raw,error:error.message}};}}
+ function backup(){const attempts={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k.startsWith(prefix+'Baseline2026_')||k===(cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1')){try{attempts[k]=P&&P.currentKeys.includes(k)?P.read(k):get(k);}catch(error){attempts[k]={recoveryRequired:true};}}}return {...window.ELAParent?.backup(),...window.ScienceParent?.backup(),...window.HistoryParent?.backup(),...window.InstructionParent?.backup(),schemaVersion:2,student:cfg.student,exportedAt:new Date().toISOString(),...recordBackup(),attempts,parentReview:reviews,assessmentRecovery:P?.exportArchive()||null,diagnosticReport:report()};}
  function validImportedAttempt(key,value){
   if(!value||typeof value!=='object'||Array.isArray(value)||value.student&&value.student!==cfg.student)return false;
   const mathKey=cfg.student==='Brody'?'brodyMathDiagnosticV1':'rory_math_baseline_v1';
-  if(key===mathKey){if(value.itemVersion!==2||!value.answers||typeof value.answers!=='object'||Array.isArray(value.answers))return false;return Object.entries(value.answers).every(([id,answer])=>/^\\d+$/.test(id)&&['A','B','C','D','E'].includes(answer));}
+  if(key===mathKey){if(value.itemVersion!==2||!value.answers||typeof value.answers!=='object'||Array.isArray(value.answers))return false;return Object.entries(value.answers).every(([id,answer])=>/^\d+$/.test(id)&&['A','B','C','D','E'].includes(answer));}
   const subject=key.slice((prefix+'Baseline2026_').length),definition=batteries.find(b=>b.subject===subject);if(!definition||value.subject!==subject||value.version!==definition.version||!value.answers||typeof value.answers!=='object'||Array.isArray(value.answers))return false;
   const ids=new Set(definition.questions.map(q=>String(q.id)));return Object.entries(value.answers).every(([id,answer])=>ids.has(String(id))&&answer&&typeof answer==='object'&&!Array.isArray(answer)&&((answer.choice===undefined||Number.isInteger(answer.choice)&&answer.choice>=0&&answer.choice<=4))&&(answer.text===undefined||typeof answer.text==='string'));
  }
+ function validateImportedRecord(record){
+  const safeId=value=>typeof value==='string'&&/^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$/.test(value);
+  const safeLink=value=>{if(value==null||value==='')return true;if(typeof value!=='string')return false;try{const url=new URL(value,location.href);return url.protocol==='http:'||url.protocol==='https:';}catch(error){return false;}};
+  const textFields=['title','subject','due','description','completedDate','date','score','notes','status','activity'];
+  for(const section of ['assignments','assessments','logs','portfolio'])for(const item of record[section]){
+   if(!item||typeof item!=='object'||Array.isArray(item)||!safeId(item.id)||!safeLink(item.link))throw Error('The backup contains an unsafe or unsupported '+section+' record. Nothing was restored.');
+   for(const field of textFields)if(item[field]!==undefined&&typeof item[field]!=='string')throw Error('The backup contains an unsupported '+section+' field. Nothing was restored.');
+   if(section==='assignments'&&item.complete!==undefined&&typeof item.complete!=='boolean'||section==='logs'&&item.minutes!==undefined&&!Number.isFinite(Number(item.minutes)))throw Error('The backup contains an unsupported '+section+' value. Nothing was restored.');
+  }
+ }
  $('context').onchange=()=>{reviews.context=$('context').value;saveReviews();};
- $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify({...report(),elaWritingBridge:window.ELAParent?.backup()},null,2));
+ $('export-report').onclick=()=>download(prefix+'-instructional-bridge.json',JSON.stringify({...report(),elaWritingBridge:window.ELAParent?.backup(),...window.InstructionParent?.backup()},null,2));
  $('export-all').onclick=()=>download(prefix+'-complete-homeschool-record.json',JSON.stringify(backup(),null,2));
  $('export-items').onclick=()=>{const fields=['student','assessment','questionNumber','domain','topic','skill','question','passage','studentResponse','responseText','correctAnswer','classification','exposureResponse','maExpectation','californiaStandardOrDomain','diagnosticBand','role','reviewDate','currentInstructionalClassification','parentalReview'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';download(prefix+'-diagnostic-items.csv',[fields.map(quote).join(','),...batteries.flatMap(rowsFor).map(r=>fields.map(k=>quote(k==='parentalReview'?JSON.stringify(r[k]):r[k])).join(','))].join('\r\n'),'text/csv');};
  $('print-parent').onclick=()=>{render();window.print();};
@@ -120,6 +132,11 @@
  $('refresh-parent').onclick=()=>load().catch(e=>alert(e.message));
  $('restore-file').onchange=async e=>{try{
   const file=e.target.files[0];if(!file)return;const imported=JSON.parse(await file.text());
+  if(imported.kind==='instruction-course'&&imported.schemaVersion===1&&imported.student===cfg.student&&imported.courseRecord){
+   window.InstructionParent.validateImport(imported);
+   if(!confirm('Merge this seven-week Math course export? Existing work and parent reviews take precedence. Missing checkpoints are added. A complete backup downloads first.'))return;
+   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));window.InstructionParent.restore(imported);await load();alert('Math course work merged. Existing records and every baseline were preserved.');return;
+  }
   if((imported?.state?.assessmentAttempts||imported?.assessmentAttempts)&&(!imported.schemaVersion||imported.schemaVersion<2)){
    if(imported.student&&imported.student!==cfg.student)throw new Error('Choose an earlier portal backup for '+cfg.student+'.');
    if(!confirm('Archive these earlier assessment attempts? They will remain historical and will not be converted into the current batteries. A backup will download first.'))return;
@@ -130,8 +147,10 @@
    download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));window.ELAParent.restore(imported);await load();alert('Backup merged. ELA work preserved.');return;
   }
   if(imported.schemaVersion!==2||imported.student!==cfg.student||!imported.record||!['assignments','assessments','logs','portfolio'].every(k=>Array.isArray(imported.record[k])))throw new Error('Choose a complete export for '+cfg.student+'.');
+  validateImportedRecord(imported.record);
   window.ScienceParent?.validateImport(imported);
   window.HistoryParent?.validateImport(imported);
+  window.InstructionParent?.validateImport(imported);
   const validatedReadingReview=imported.parentReview?.readingFollowUp?window.ReadingReview.validate(imported.parentReview.readingFollowUp,batteries.find(b=>b.subject==='reading')):null;
   if(!confirm('Merge '+imported.student+'’s backup ('+imported.record.logs.length+' logs, '+imported.record.portfolio.length+' work samples)? Existing records and attempts take precedence when IDs match. A backup will download first.'))return;
   download(prefix+'-before-restore.json',JSON.stringify(backup(),null,2));
@@ -144,12 +163,13 @@
    for(const k of ['assignments','assessments','logs','portfolio']){const ids=new Set(current[k].map(x=>x.id));for(const item of imported.record[k])if(item.id&&!ids.has(item.id)){current[k].push(item);ids.add(item.id);}}
    localStorage.setItem(cfg.recordKey,JSON.stringify(current));
    for(const [k,v] of Object.entries(imported.attempts||{}))if(allowed.includes(k)&&(P?P.inspect(k).value===null:localStorage.getItem(k)===null)&&v&&typeof v.answers==='object'){if(P&&P.currentKeys.includes(k))P.write(k,v);else localStorage.setItem(k,JSON.stringify(v));}
-   window.ELAParent?.restore(imported);window.ScienceParent?.restore(imported);window.HistoryParent?.restore(imported);
+   window.ELAParent?.restore(imported);window.ScienceParent?.restore(imported);window.HistoryParent?.restore(imported);window.InstructionParent?.restore(imported);
    if(imported.parentReview?.readingFollowUp){const incoming=validatedReadingReview;const currentReviews=get(reviewKey)||{};if(!currentReviews.readingFollowUp){currentReviews.readingFollowUp=incoming;localStorage.setItem(reviewKey,JSON.stringify({...imported.parentReview,...currentReviews}));}}
    if(!localStorage.getItem(reviewKey)&&imported.parentReview)localStorage.setItem(reviewKey,JSON.stringify(imported.parentReview));if(imported.assessmentRecovery)P?.mergeRecovery(imported.assessmentRecovery);await load();alert('Backup merged. Existing records and attempts were preserved.');
   }catch(error){rollback();throw error;}
  }catch(error){alert('Restore needs attention: '+error.message);}finally{e.target.value='';}};
- window.addEventListener('beforeprint',()=>{if(loaded){render();document.querySelectorAll('#ela-parent details,#science-parent details,#history-parent details').forEach(d=>d.open=true);}});
+ window.addEventListener('beforeprint',()=>{if(loaded){render();document.querySelectorAll('#ela-parent details,#science-parent details,#history-parent details,#rory-math-parent details').forEach(d=>d.open=true);}});
  window.addEventListener('afterprint',()=>{if(loaded)render();});
+ window.addEventListener('storage',event=>{if(event.key===reviewKey)reviewConflict=true;});
  gate();
 })();
